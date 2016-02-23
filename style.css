@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'Brasilia';
+  src: url('Brasilia.ttf');
+}
+
+img { max-width: 100%; }
+
+.brasilius {
+	font-family: "Brasilia";
+}
+
+.wrapper {
+	position: relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	background-color: white;
+}
+
+section#home {
+	background-color: #036ded;
+}
+
+.navigation.container {
+	max-width: 144rem;
+	padding-top: 4.2rem;
+}
+
+.navigation .title, .navigation-title {
+	color: #606c76;
+	display: inline;
+	line-height: 5.2rem;
+	font-size: 1.6rem;
+	padding: 0;
+	position: relative;
+	text-decoration: none;
+}
+
+.navigation .title {
+	display: none;
+}
+
+.navigation-list {
+	list-style: none;
+	margin-bottom: 0;
+	/*margin-right: 5.0rem;*/
+}
+
+@media (min-width: 80.0rem) {
+	.navigation-list {
+		margin-right: 0;
+	}
+}
+
+.navigation-item {
+	float: left;
+	margin-bottom: 0;
+	margin-left: 4.8rem;
+	position: relative;
+}
+
+.navigation-link {
+	display: inline;
+	color: white;
+	font-family: 'Brasilia';
+	line-height: 5.2rem;
+	font-size: 2rem;
+	padding: 0;
+	text-decoration: none;
+}
+
+#home {
+
+
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: 90px;
+}
+
+svg polygon {
+	background: #036ded;
+	fill: white;
+}
+
+#home h1.title {
+	font-family: 'Brasilia';
+}
+
+#home:before,
+#home:after {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232e3141;' /%3E%3C/svg%3E");
+}
+
+.home-content-container {
+	margin-top: 5rem;
+	color: white;
+}
+
+.home-content {
+	display: flex!important;
+	justify-content: center;
+}
+
+.home-content-container .title {
+	font-family: 'Brasilia';
+	font-size: 9rem;
+	color: white;
+	line-height: 140%;
+}
+
+.home-content-container .sub-title {
+	color: #90CAF9;
+}
+
+.home-content-container .description {
+	font-size: 1.8rem;
+}
+
+.googleplay {
+	margin-left: 2rem;
+}
+
+
+/*Features Section*/
+#features .title-row,
+#download .title-row{
+	margin-bottom: 4.5rem;
+	margin-top: 4.5rem;
+	text-align: center;
+}
+
+.title-row .title {
+	color: #004D99;
+	font-family: 'Brasilia';
+	margin-bottom: 1rem;
+}
+
+.title-row .sub-title {
+	color: #808080;
+}
+
+/*Subscription Section*/
+#subscribe {
+	background: #004D99;
+	color: white;
+	text-align: center;
+	padding-top: 6rem;
+	padding-bottom: 8rem;
+}
+
+#subscribe .section-title {
+	font-family: 'Brasilia';
+}
+
+#subscribe .section-description {
+	margin-bottom: 6rem;
+}
+
+#email-input {
+	max-width: 650px;
+	background: white;
+	border-radius: 50px;
+	height: 70px;
+	border: 0;
+	margin-right: 2rem;
+	padding-left: 40px;
+	color: #004D99;
+}
+
+#email-input::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f0e0  '; color: #CACACA }
+#email-input::-moz-placeholder::before  { font-family: fontAwesome; content:'\f0e0  '; color: #CACACA } /* firefox 19+ */
+#email-input:-ms-input-placeholder::before  { font-family: fontAwesome; content:'\f0e0  '; color: #CACACA } /* ie */
+input#email-input:-moz-placeholder::before  { font-family: fontAwesome; content:'\f0e0  '; color: #CACACA }
+
+#subscription-form-submit-btn {
+	width: 200px;
+	height: 70px;
+	line-height: 70px;
+	background: white;
+	color: #004D99;
+	border-radius: 50px;
+	font-size: 3rem;
+}
+
+
+#footer {
+	color: #757575;
+}

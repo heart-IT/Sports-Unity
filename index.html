@@ -1,17 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<title>Sports Unity</title>
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
 	<link rel="stylesheet" href="node_modules/milligram/dist/milligram.css">
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	hello, welcome to the Sports unity.
+	<main class="wrapper">
+		<section id="home">
+			<nav class="navigation container">
+				<a href="#" class="navigation-title">
+					<img src="img/sports-unity-logo.png" alt="Sports Unity" title="Sports Unity" class="img">
+				</a>
+				<ul class="navigation-list float-right">
+					<li class="navigation-item">
+						<a href="#" class="navigation-link">Contact</a>
+					</li>
+					<li class="navigation-item">
+						<a href="#" class="navigation-link">Download</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="home-content-container container">
+				<div class="row">
+					<div class="column column-33">
+						<img src="img/iphone-blue.png" alt="Sports Unity Screenshot" title="Sports Unity Screenshot" class="img">
+					</div>
+					<div class="column column-67 home-content">
+						<div class="col-center">
+							<h1 class="title">Sports Unity for <br /><span class="sub-title">the People</span></h1>
+							<p class="description">We are crazy about Sports. That's why we created the best mobile app for fans around the world. Whether you're looking
+								for the latest scores and news or want to connect with your mates, <span class="brasilius"> Sports Unity </span>								makes it happen.</p>
+							<a href="#!" class="download-btn applestore" target="_blank" title="Get on Apple store">
+								<object type="image/svg+xml" data="img/app_store.svg">Get it on Apple Store</object>
+							</a>
+							<a href="#!" class="download-btn googleplay" target="_blank" title="Get on Google play">
+								<object type="image/svg+xml" data="img/play_store.svg">Get it on Google Play</object>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+					<polygon points="0 0 100 10 0 10" />
+				</svg>
+			</div>
+		</section>
+
+		<section id="features">
+			<div class="container">
+				<div class="row title-row">
+					<div class="column">
+						<h3 class="title">More from apps that you love</h3>
+						<h5 class="sub-title">everything a real fan needs</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">Slider Will Come Here</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="download">
+			<div class="container">
+				<div class="row title-row">
+					<div class="column">
+						<h3 class="title">Download</h3>
+						<h6 class="sub-title">Avaiable on all major platforms</h6>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<a href="#!" class="download-btn applestore" target="_blank" title="Get on Apple store">
+							<object type="image/svg+xml" data="img/app_store_s.svg">Get it on Apple Store</object>
+						</a>
+						<a href="#!" class="download-btn googleplay" target="_blank" title="Get on Google play">
+							<object type="image/svg+xml" data="img/play_store_s.svg">Get it on Google Play</object>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="subscribe">
+			<div class="container">
+				<h3 class="section-title">Subscribe for updates</h3>
+				<h5 class="section-description">What you see is just the beginning. We're working hard to bring more sports to our platform. Leave us your e-mail, and we'll keep you up-to-date with new releases.</h5>
+				<form>
+					<input type="email" placeholder="Your e-mail" id="email-input" validate>
+					<input type="submit" class="button" value="GO!" id="subscription-form-submit-btn">
+				</form>
+			</div>
+		</section>
+
+		<section id="footer">
+			<div class="container">
+				<a href="#" class="footer-logo-link"><img src="img/sports-unity-logo.png" alt="Sports Unity Logo" class="footer-logo"></a>
+				<span>Copyright 2016 Sports Unity. All Right Reserved.</span>
+				<ul class="footer-navigation-menu float-right">
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms of Use</a></li>
+					<li><a href="#">Legal</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+		</section>
+	</main>
 </body>
+
 </html>
