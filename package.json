@@ -1,0 +1,29 @@
+{
+  "name": "sports-unity",
+  "version": "1.0.0",
+  "description": "Sports Unity App Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xTMNTxRaphaelx/Sports-Unity.git"
+  },
+  "keywords": [
+    "Sports",
+    "Android",
+    "App",
+    "IOs",
+    "application"
+  ],
+  "author": "Mad Machines",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xTMNTxRaphaelx/Sports-Unity/issues"
+  },
+  "homepage": "https://github.com/xTMNTxRaphaelx/Sports-Unity#readme",
+  "dependencies": {
+    "milligram": "^1.1.0"
+  }
+}
