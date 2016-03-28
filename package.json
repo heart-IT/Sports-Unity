@@ -1,0 +1,11 @@
+{
+  "name": "sports-unity",
+  "version": "0.0.1",
+  "description": "sports unity landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mad machines",
+  "license": "ISC"
+}
