@@ -12,6 +12,7 @@ body {
 	width: 85%;
 }
 .slider {
+	height: 640px;
 	.slides {
 		background-color: transparent;
 		li img {
@@ -26,6 +27,11 @@ body {
 			&.active {
 				background-color: $blue;
 			}
+		}
+	}
+	&:not(.connect-with-friends-slider)  {
+		.indicators {
+			right: 20%;
 		}
 	}
 }
@@ -135,6 +141,53 @@ nav {
 		}
 		a {
 			margin-right: 24px;
+		}
+	}
+}
+
+.more-from-app,
+.connect-with-friends,
+.spread-the-word,
+.downloads {
+	h3 {
+		color: #444444;
+	}
+	.divider {
+		background-color: #004D99;
+	}
+	p {
+		color: #777777;
+	}
+}
+
+.phone-div {
+	background-image: url('../images/sportsunity-phone-full.png');
+	background-repeat: no-repeat;
+	height: 692px;
+	width: 361px;
+	position: relative;
+	margin: 0 auto;
+	.slider li {
+		position: absolute;
+		left: 23px;
+		top: 63px;
+		overflow: hidden;
+		z-index: 2;
+		width: 296px;
+		height: 526px;
+	}
+}
+
+// more from apps
+.more-from-app {
+	.section {
+		svg {
+			margin: 0.82rem 0 0.656rem 0;
+		}
+		&.active {
+			svg path {
+				fill: #004D99;
+			}
 		}
 	}
 }

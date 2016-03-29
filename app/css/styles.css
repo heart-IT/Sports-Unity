@@ -8,17 +8,20 @@ body {
 .container {
   width: 85%; }
 
-.slider .slides {
-  background-color: transparent; }
-  .slider .slides li img {
-    background-size: contain;
-    background-repeat: no-repeat; }
-
-.slider .indicators .indicator-item {
-  height: 8px;
-  width: 8px; }
-  .slider .indicators .indicator-item.active {
-    background-color: #004D99; }
+.slider {
+  height: 640px; }
+  .slider .slides {
+    background-color: transparent; }
+    .slider .slides li img {
+      background-size: contain;
+      background-repeat: no-repeat; }
+  .slider .indicators .indicator-item {
+    height: 8px;
+    width: 8px; }
+    .slider .indicators .indicator-item.active {
+      background-color: #004D99; }
+  .slider:not(.connect-with-friends-slider) .indicators {
+    right: 20%; }
 
 body > .section {
   padding-top: 50px;
@@ -95,3 +98,43 @@ nav {
       font-weight: 300; }
     .for-the-people .content-section a {
       margin-right: 24px; }
+
+.more-from-app h3,
+.connect-with-friends h3,
+.spread-the-word h3,
+.downloads h3 {
+  color: #444444; }
+
+.more-from-app .divider,
+.connect-with-friends .divider,
+.spread-the-word .divider,
+.downloads .divider {
+  background-color: #004D99; }
+
+.more-from-app p,
+.connect-with-friends p,
+.spread-the-word p,
+.downloads p {
+  color: #777777; }
+
+.phone-div {
+  background-image: url("../images/sportsunity-phone-full.png");
+  background-repeat: no-repeat;
+  height: 692px;
+  width: 361px;
+  position: relative;
+  margin: 0 auto; }
+  .phone-div .slider li {
+    position: absolute;
+    left: 23px;
+    top: 63px;
+    overflow: hidden;
+    z-index: 2;
+    width: 296px;
+    height: 526px; }
+
+.more-from-app .section svg {
+  margin: 0.82rem 0 0.656rem 0; }
+
+.more-from-app .section.active svg path {
+  fill: #004D99; }
