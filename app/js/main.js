@@ -26,12 +26,21 @@ $(document).ready(function () {
 	$('.live-score-slider').slider('pause');
 	$('.connect-with-friends-slider').slider({ height: '600px', interval: 2000 });
 	$('.connect-with-friends-slider').slider('pause');
+
 	var options = [
 		{ selector: '.connect-with-friends-slider', offset: 50, callback: 'startConnectSlider()' },
 		{ selector: '.live-score-slider', offset: 50, callback: 'startLiveScoreSlider()' },
 		{ selector: '.more-from-app-slider', offset: 50, callback: 'startMoreFromAppSlider()' },
 	];
 	Materialize.scrollFire(options);
+
+	$('.content-row .section h5').click(function(e) {
+		e.preventDefault();
+		var index= $(this).attr('data-attr') ? $(this).attr('data-attr') : $(this).closest('.section').index();
+		var slider= $(this).closest('.content-row').find('.slider');
+		$(slider).slider('goTo', index);
+	});
+
 });
 
 function register($form) {

@@ -45,6 +45,9 @@ body > .section {
 		padding-top: 200px;
 		padding-bottom: 0;
 	}
+	&.subscribe {
+		padding-bottom: 120px;
+	}
 	.heading-row {
 		text-align: center;
 		h3 {
@@ -66,6 +69,7 @@ body > .section {
 				font-family: 'Brasilia';
 				line-height: 150%;
 				font-size: 2rem;
+				cursor: pointer;
 			}
 			p {
 				font-size: 17px;
@@ -237,6 +241,9 @@ nav {
 }
 
 .subscribe {
+	background-image: url('../images/subscribe-forupdate-bg.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
 	.content-row {
 		.email-input {
 			display: inline;

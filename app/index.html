@@ -7,10 +7,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+	<!--build:css css/styles.min.css-->
 	<link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css" media="screen,projection"
 	/>
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/styles.css">
+	<!--endbuild-->
 </head>
 
 <body>
@@ -92,7 +94,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col m4 center-align">
+				<div class="col m4 center-align slider-div">
 					<div class="phone-div">
 						<div class="slider more-from-app-slider">
 							<ul class="slides">
@@ -125,7 +127,7 @@
 								<img src="images/ic-see-nearby.svg" class="svg">
 							</div>
 							<div class="col m10">
-								<h5>See Nearby Friends</h5>
+								<h5 data-attr="3">See Nearby Friends</h5>
 								<p>Gang up with your friends on Sports Unity, and watch your favorite game, exhilarated!</p>
 							</div>
 						</div>
@@ -137,7 +139,7 @@
 								<img src="images/ic-news.svg" class="svg">
 							</div>
 							<div class="col m10">
-								<h5>News</h5>
+								<h5 data-attr="4">News</h5>
 								<p>Stay abreast with the latest team news, player updates, predictions, analysis and much more.</p>
 							</div>
 						</div>
@@ -148,7 +150,7 @@
 								<img src="images/ic-betting.svg" class="svg">
 							</div>
 							<div class="col m10">
-								<h5>See Betting Odds</h5>
+								<h5 data-attr="5">See Betting Odds</h5>
 								<p>Know which team the money’s on, for the unpredictability of the game shall either way enthrall you.</p>
 							</div>
 						</div>
@@ -183,7 +185,7 @@
 						<p>Get news, stats and alerts for your favorite leagues, teams and players. Never miss a thing!</p>
 					</div>
 				</div>
-				<div class="col m5">
+				<div class="col m5 slider-div">
 					<div class="phone-div">
 						<div class="slider live-score-slider">
 							<ul class="slides">
@@ -215,7 +217,7 @@
 				</div>
 			</div>
 			<div class="row content-row">
-				<div class="col m7 connect-with-friends-slider-div">
+				<div class="col m7 connect-with-friends-slider-div slider-div">
 					<div class="slider connect-with-friends-slider">
 						<ul class="slides">
 							<li><img src="images/sports-unity-stickers-screen.png" alt="Sports Unity Sticker Screen"></li>
@@ -323,9 +325,11 @@
 		</div>
 	</footer>
 
+	<!--build:js js/main.min.js -->
 	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script>
 	<script src="js/main.js"></script>
+	<!-- endbuild -->
 </body>
 
 </html>
