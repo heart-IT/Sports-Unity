@@ -51,9 +51,9 @@ function register($form) {
 		cache: false,
 		dataType: 'json',
 		contentType: "application/json; charset=utf-8",
-		always: function() {
-			$('.result').html('Thanks for your interest.').removeClass('hide');
-		}
+	}).done(function() {
+		$('.result').html('Thanks for your interest.').removeClass('hide');
+		$("#mce-EMAIL").val('');
 	});
 }
 
