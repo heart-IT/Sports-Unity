@@ -1,3 +1,140 @@
+@font-face {
+	font-family: 'Brasilia';
+	src: url('../fonts/Brasilia.ttf');
+}
+$blue: #004D99;
+
+// MAterialize Over Rides
 body {
-	background-color: blue;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.container {
+	width: 85%;
+}
+.slider {
+	.slides {
+		background-color: transparent;
+		li img {
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+	.indicators {
+		.indicator-item {
+			height: 8px;
+			width: 8px;
+			&.active {
+				background-color: $blue;
+			}
+		}
+	}
+}
+
+
+// Common CSS
+body > .section {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	&.for-the-people {
+		padding-top: 200px;
+		padding-bottom: 0;
+	}
+	.heading-row {
+		text-align: center;
+		h3 {
+			font-family: 'Brasilia';
+		}
+		.divider {
+			width: 100px;
+			height: 4px;
+			margin: 24px auto;
+		}
+		p {
+			font-size: 1.3rem;
+			font-weight: 300;
+		}
+	}
+	.content-row {
+		.section {
+			h5 {
+				font-family: 'Brasilia';
+				line-height: 150%;
+			}
+			&.active {
+				h5 {
+					color: $blue;
+				}
+			}
+		}
+	}
+}
+
+
+
+// Nav bar CSS
+nav {
+	background-color: transparent;
+	box-shadow: none;
+	position: absolute;
+	top: 0;
+	height: 120px;
+	.nav-wrapper {
+		padding-top: 25px;
+		padding-bottom: 25px;
+		.brand-logo {
+			height: 70px;	//dimensions of brand logo svg
+			width: 183px;
+			img {
+				height: 100%; width: 100%;
+			}
+		}
+		ul a {
+			font-family: 'Brasilia';
+			font-size: 1.2rem;
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+// For the People
+.for-the-people {
+	background-image: url('../images/sports-unity-hero-banner.jpg');
+	background-size: cover;
+	.phone-section {
+		height: 574px;
+		.banner-phone {
+			background-image: url('../images/sportsunity-phone.png');
+			background-repeat: no-repeat;
+			height: 574px;
+			width: 320px;
+			position: relative;
+			margin: 0 auto;
+			img {
+				position: absolute;
+				width: 293px;
+				height: 515px;
+				top: 59px;
+				left: 13px;
+				overflow: hidden;
+				z-index: 2;
+			}
+		}
+	}
+	.content-section {
+		color: #fff;
+		h1 {
+			font-size: 5.7rem;
+			line-height: 140%;
+			font-family: 'Brasilia';
+		}
+		p {
+			font-size: 1.5rem;
+			font-weight: 300;
+		}
+		a {
+			margin-right: 24px;
+		}
+	}
 }

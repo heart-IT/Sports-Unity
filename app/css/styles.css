@@ -1,2 +1,97 @@
+@font-face {
+  font-family: 'Brasilia';
+  src: url("../fonts/Brasilia.ttf"); }
+
 body {
-  background-color: blue; }
+  font-family: 'Roboto Condensed', sans-serif; }
+
+.container {
+  width: 85%; }
+
+.slider .slides {
+  background-color: transparent; }
+  .slider .slides li img {
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+.slider .indicators .indicator-item {
+  height: 8px;
+  width: 8px; }
+  .slider .indicators .indicator-item.active {
+    background-color: #004D99; }
+
+body > .section {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  body > .section.for-the-people {
+    padding-top: 200px;
+    padding-bottom: 0; }
+  body > .section .heading-row {
+    text-align: center; }
+    body > .section .heading-row h3 {
+      font-family: 'Brasilia'; }
+    body > .section .heading-row .divider {
+      width: 100px;
+      height: 4px;
+      margin: 24px auto; }
+    body > .section .heading-row p {
+      font-size: 1.3rem;
+      font-weight: 300; }
+  body > .section .content-row .section h5 {
+    font-family: 'Brasilia';
+    line-height: 150%; }
+  body > .section .content-row .section.active h5 {
+    color: #004D99; }
+
+nav {
+  background-color: transparent;
+  box-shadow: none;
+  position: absolute;
+  top: 0;
+  height: 120px; }
+  nav .nav-wrapper {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    nav .nav-wrapper .brand-logo {
+      height: 70px;
+      width: 183px; }
+      nav .nav-wrapper .brand-logo img {
+        height: 100%;
+        width: 100%; }
+    nav .nav-wrapper ul a {
+      font-family: 'Brasilia';
+      font-size: 1.2rem; }
+      nav .nav-wrapper ul a:hover {
+        background-color: transparent; }
+
+.for-the-people {
+  background-image: url("../images/sports-unity-hero-banner.jpg");
+  background-size: cover; }
+  .for-the-people .phone-section {
+    height: 574px; }
+    .for-the-people .phone-section .banner-phone {
+      background-image: url("../images/sportsunity-phone.png");
+      background-repeat: no-repeat;
+      height: 574px;
+      width: 320px;
+      position: relative;
+      margin: 0 auto; }
+      .for-the-people .phone-section .banner-phone img {
+        position: absolute;
+        width: 293px;
+        height: 515px;
+        top: 59px;
+        left: 13px;
+        overflow: hidden;
+        z-index: 2; }
+  .for-the-people .content-section {
+    color: #fff; }
+    .for-the-people .content-section h1 {
+      font-size: 5.7rem;
+      line-height: 140%;
+      font-family: 'Brasilia'; }
+    .for-the-people .content-section p {
+      font-size: 1.5rem;
+      font-weight: 300; }
+    .for-the-people .content-section a {
+      margin-right: 24px; }
