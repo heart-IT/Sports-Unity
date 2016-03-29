@@ -4,6 +4,8 @@
 $(document).ready(function () {
 	convertIconToSvg();
 
+	activateMailChimpForm();
+
 	$('a[href*="#"]').on('click', function (e) {
 		// prevent default action and bubbling
 		e.preventDefault();
@@ -31,6 +33,33 @@ $(document).ready(function () {
 	];
 	Materialize.scrollFire(options);
 });
+
+function register($form) {
+	$.ajax({
+		type: $form.attr('method'),
+		url: $form.attr('action'),
+		data: $form.serialize(),
+		cache: false,
+		dataType: 'json',
+		contentType: "application/json; charset=utf-8",
+		always: function() {
+			$('.result').html('Thanks for your interest.').removeClass('hide');
+		}
+	});
+}
+
+
+function activateMailChimpForm() {
+	var $form = $('#mc-embedded-subscribe-form');
+
+	$('#mc-embedded-subscribe').on('click', function (event) {
+		if (event) event.preventDefault();
+		// if(validate_input($form)) {
+		// 	register($form);
+		// }
+		register($form);
+	});
+}
 
 function startConnectSlider() {
 	$('.connect-with-friends-slider').slider('start');
