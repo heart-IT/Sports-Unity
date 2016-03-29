@@ -20,11 +20,11 @@ $(document).ready(function () {
 		});
 	});
 
-	$(".more-from-app-slider").slider({ height: '600px' });
+	$(".more-from-app-slider").slider({ height: '600px', interval: 2000 });
 	$('.more-from-app-slider').slider('pause');
-	$(".live-score-slider").slider({ height: '600px' });
+	$(".live-score-slider").slider({ height: '600px', interval: 2000 });
 	$('.live-score-slider').slider('pause');
-	$('.connect-with-friends-slider').slider({ height: '600px' });
+	$('.connect-with-friends-slider').slider({ height: '600px', interval: 2000 });
 	$('.connect-with-friends-slider').slider('pause');
 	var options = [
 		{ selector: '.connect-with-friends-slider', offset: 50, callback: 'startConnectSlider()' },

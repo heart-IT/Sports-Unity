@@ -42,7 +42,10 @@ body > .section {
       font-weight: 300; }
   body > .section .content-row .section h5 {
     font-family: 'Brasilia';
-    line-height: 150%; }
+    line-height: 150%;
+    font-size: 2rem; }
+  body > .section .content-row .section p {
+    font-size: 17px; }
   body > .section .content-row .section.active h5 {
     color: #004D99; }
 
@@ -145,6 +148,9 @@ nav {
     z-index: 2;
     width: 296px;
     height: 526px; }
+
+.more-from-app .section h5 {
+  color: #444; }
 
 .more-from-app .section svg {
   margin: 0.82rem 0 0.656rem 0; }
