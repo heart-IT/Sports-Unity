@@ -160,6 +160,20 @@ nav {
 	}
 }
 
+.live-scores,
+.subscribe {
+	background-color: #004D99;
+	h3 {
+		color: #fff;
+	}
+	.divider {
+		background-color: #fff;
+	}
+	p {
+		color: #fff;
+	}
+}
+
 .phone-div {
 	background-image: url('../images/sportsunity-phone-full.png');
 	background-repeat: no-repeat;
@@ -188,6 +202,109 @@ nav {
 			svg path {
 				fill: #004D99;
 			}
+		}
+	}
+}
+
+//live scores
+.live-scores {
+	.content-row {
+		.section {
+			h5 {
+				color: #fff;
+			}
+			&.active {
+				h5 {
+					text-decoration: underline;
+					color: #fff!important;
+				}
+			}
+		}
+		.indicator-item {
+			background-color: rgba(224, 224, 224, 0.53);
+			&.active {
+				background-color: #fff!important;
+			}
+		}
+	}
+}
+
+.subscribe {
+	.content-row {
+		.email-input {
+			display: inline;
+			position: relative;
+			margin-right: 2rem;
+			label {
+				position: absolute;
+				top: -2px;
+				left: 30px;
+				img {
+					width: 80%;
+				}
+			}
+			input {
+				max-width: 600px;
+				background: white;
+				border-radius: 50px;
+				height: 70px;
+				border: 0;
+				padding-left: 90px;
+				color: $blue;
+				&:focus {
+					border: 0;
+				}
+				// &::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f0e0  '; color: #CACACA }
+				// &::-moz-placeholder::before  { font-family: fontAwesome; content:'\f0e0  '; color: #CACACA } /* firefox 19+ */
+				// &:-ms-input-placeholder::before  { font-family: fontAwesome; content:'\f0e0  '; color: #CACACA } /* ie */
+				// &:-moz-placeholder::before  { font-family: fontAwesome; content:'\f0e0  '; color: #CACACA }
+			}
+		}
+		button {
+			width: 200px;
+			height: 70px;
+			line-height: 70px;
+			background: white;
+			color: $blue;
+			border-radius: 50px;
+			font-weight: bold;
+			font-size: 1.8rem;
+		}
+	}
+}
+
+.spread-the-word {
+	.content-row {
+		a {
+			margin: 0 6px;
+		}
+	}
+}
+
+.downloads {
+	a {
+		margin: 0 36px;
+	}
+}
+
+footer.page-footer {
+	padding-top: 0; //overriding materialize padding
+	background-color: $blue;
+	color: #fff;
+	.footer-copyright {
+		height: 84px;
+		line-height: 84px;
+		font-weight: bold;
+		.sports-unity-logo {
+			height: 48px;
+			vertical-align: middle;
+			margin-right: 18px;
+		}
+		a {
+			font-family: "Brasilia";
+			margin-left: 12px;
+			margin-right: 12px;
+			color: #fff;
 		}
 	}
 }

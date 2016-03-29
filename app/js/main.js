@@ -4,6 +4,20 @@
 $(document).ready(function () {
 	convertIconToSvg();
 
+	$('a[href*="#"]').on('click', function (e) {
+		// prevent default action and bubbling
+		e.preventDefault();
+		e.stopPropagation();
+		// set target to anchor's "href" attribute
+		var target = $(this).attr('href');
+		// scroll to each target
+		$(target).velocity('scroll', {
+			duration: 500,
+			offset: -40,
+			easing: 'ease-in-out'
+		});
+	});
+
 	$(".more-from-app-slider").slider({ height: '600px' });
 	$('.more-from-app-slider').slider('pause');
 	$(".live-score-slider").slider({ height: '600px' });

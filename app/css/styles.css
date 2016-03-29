@@ -117,6 +117,19 @@ nav {
 .downloads p {
   color: #777777; }
 
+.live-scores,
+.subscribe {
+  background-color: #004D99; }
+  .live-scores h3,
+  .subscribe h3 {
+    color: #fff; }
+  .live-scores .divider,
+  .subscribe .divider {
+    background-color: #fff; }
+  .live-scores p,
+  .subscribe p {
+    color: #fff; }
+
 .phone-div {
   background-image: url("../images/sportsunity-phone-full.png");
   background-repeat: no-repeat;
@@ -138,3 +151,70 @@ nav {
 
 .more-from-app .section.active svg path {
   fill: #004D99; }
+
+.live-scores .content-row .section h5 {
+  color: #fff; }
+
+.live-scores .content-row .section.active h5 {
+  text-decoration: underline;
+  color: #fff !important; }
+
+.live-scores .content-row .indicator-item {
+  background-color: rgba(224, 224, 224, 0.53); }
+  .live-scores .content-row .indicator-item.active {
+    background-color: #fff !important; }
+
+.subscribe .content-row .email-input {
+  display: inline;
+  position: relative;
+  margin-right: 2rem; }
+  .subscribe .content-row .email-input label {
+    position: absolute;
+    top: -2px;
+    left: 30px; }
+    .subscribe .content-row .email-input label img {
+      width: 80%; }
+  .subscribe .content-row .email-input input {
+    max-width: 600px;
+    background: white;
+    border-radius: 50px;
+    height: 70px;
+    border: 0;
+    padding-left: 90px;
+    color: #004D99; }
+    .subscribe .content-row .email-input input:focus {
+      border: 0; }
+
+.subscribe .content-row button {
+  width: 200px;
+  height: 70px;
+  line-height: 70px;
+  background: white;
+  color: #004D99;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.8rem; }
+
+.spread-the-word .content-row a {
+  margin: 0 6px; }
+
+.downloads a {
+  margin: 0 36px; }
+
+footer.page-footer {
+  padding-top: 0;
+  background-color: #004D99;
+  color: #fff; }
+  footer.page-footer .footer-copyright {
+    height: 84px;
+    line-height: 84px;
+    font-weight: bold; }
+    footer.page-footer .footer-copyright .sports-unity-logo {
+      height: 48px;
+      vertical-align: middle;
+      margin-right: 18px; }
+    footer.page-footer .footer-copyright a {
+      font-family: "Brasilia";
+      margin-left: 12px;
+      margin-right: 12px;
+      color: #fff; }
