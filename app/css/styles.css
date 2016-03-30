@@ -55,6 +55,10 @@ body > .section .content-row .section p {
 body > .section .content-row .section.active h5 {
   color: #004D99; }
 
+@media screen and (max-width: 600px) {
+  body > .section .content-row .section {
+    text-align: center; } }
+
 nav {
   background-color: transparent;
   box-shadow: none;
@@ -202,37 +206,36 @@ nav {
   background-position: center bottom;
   padding-top: 60px;
   padding-bottom: 60px; }
-  .subscribe .content-row .input-field {
-    width: 72%;
-    display: inline-block; }
-    .subscribe .content-row .input-field label {
+  .subscribe .content-row .email-input {
+    display: inline;
+    position: relative;
+    margin-right: 2rem; }
+    .subscribe .content-row .email-input label {
       position: absolute;
-      top: 20px;
-      left: 40px; }
-    .subscribe .content-row .input-field input {
-      background-color: #fff;
-      border: 0;
+      top: -2px;
+      left: 30px; }
+      .subscribe .content-row .email-input label img {
+        width: 72%; }
+    .subscribe .content-row .email-input input {
+      max-width: 600px;
+      background: #fff;
       border-radius: 50px;
-      box-sizing: border-box;
-      color: #004D99;
       height: 70px;
-      padding-left: 15px;
-      outline: none;
-      width: 100%; }
-      .subscribe .content-row .input-field input:focus {
+      border: 0;
+      padding-left: 90px;
+      color: #004D99;
+      box-sizing: border-box; }
+      .subscribe .content-row .email-input input:focus {
         border: 0; }
   .subscribe .content-row button {
-    background-color: #fff;
-    border: 0;
-    border-radius: 50px;
-    color: #004D99;
-    font-size: 1.2rem;
-    font-weight: bold;
+    width: 200px;
     height: 70px;
-    margin-left: 2%;
-    outline: none;
-    top: -1px;
-    width: 18%; }
+    line-height: 70px;
+    background: #fff;
+    color: #004D99;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.8rem; }
   .subscribe .content-row .result {
     color: #fff; }
 

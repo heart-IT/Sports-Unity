@@ -39,9 +39,6 @@ body > .section {
 			padding-top: 130px;
 		}
 	}
-	&.subscribe {
-		// padding-bottom: 120px;
-	}
 	.heading-row {
 		text-align: center;
 		h3 {
@@ -72,6 +69,9 @@ body > .section {
 				h5 {
 					color: $blue;
 				}
+			}
+			@media screen and (max-width: $small-size) {
+				text-align: center;
 			}
 		}
 	}
@@ -260,35 +260,41 @@ nav {
 	padding-top: 60px;
 	padding-bottom: 60px;
 	.content-row {
-		.input-field {
-			width: 72%;
-			display: inline-block;
-			label { position: absolute; top: 20px; left: 40px; }
+		.email-input {
+			display: inline;
+			position: relative;
+			margin-right: 2rem;
+			label {
+				position: absolute;
+				top: -2px;
+				left: 30px;
+				img {
+					width: 72%
+				}
+			}
 			input {
-				background-color: #fff;
-				border: 0;
+				max-width: 600px;
+				background: #fff;
 				border-radius: 50px;
-				box-sizing: border-box;
-				color: $blue;
 				height: 70px;
-				padding-left: 15px;
-				outline: none;
-				width: 100%;
-				&:focus { border: 0; }
+				border: 0;
+				padding-left: 90px;
+				color: $blue;
+				box-sizing: border-box;
+				&:focus {
+					border: 0;
+				}
 			}
 		}
 		button {
-			background-color: #fff;
-			border: 0;
-			border-radius: 50px;
-			color: $blue;
-			font-size: 1.2rem;
-			font-weight: bold;
+			width: 200px;
 			height: 70px;
-			margin-left: 2%;
-			outline: none;
-			top: -1px;
-			width: 18%;
+			line-height: 70px;
+			background: #fff;
+			color: $blue;
+			border-radius: 50px;
+			font-weight: bold;
+			font-size: 1.8rem;
 		}
 		.result {
 			color: #fff;
