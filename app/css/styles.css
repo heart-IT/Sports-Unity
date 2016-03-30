@@ -226,7 +226,8 @@ nav {
       color: #004D99;
       box-sizing: border-box; }
       .subscribe .content-row .email-input input:focus {
-        border: 0; }
+        border: 0;
+        box-shadow: none; }
   .subscribe .content-row button {
     width: 200px;
     height: 70px;
@@ -236,7 +237,7 @@ nav {
     border-radius: 50px;
     font-weight: bold;
     font-size: 1.8rem; }
-  .subscribe .content-row .result {
+  .subscribe .content-row .subscribtion-result {
     color: #fff; }
 
 .spread-the-word .content-row a {
@@ -276,3 +277,67 @@ footer.page-footer {
       @media screen and (max-width: 992px) {
         footer.page-footer .footer-copyright a.footer-nav {
           display: none; } }
+
+#iOS-modal {
+  border-radius: 6px;
+  max-width: 600px; }
+  #iOS-modal .modal-content {
+    padding: 0; }
+    #iOS-modal .modal-content .modal-head {
+      border-bottom: 1px solid #c5c5c5; }
+      #iOS-modal .modal-content .modal-head h4 {
+        margin-top: 12px;
+        margin-bottom: 9px;
+        font-family: 'Brasilia';
+        padding: 0 24px;
+        font-size: 1.8rem;
+        color: #444; }
+      #iOS-modal .modal-content .modal-head .material-icons {
+        position: absolute;
+        top: 12px;
+        right: 6px;
+        color: #c5c5c5; }
+    #iOS-modal .modal-content .modal-body {
+      text-align: center; }
+      #iOS-modal .modal-content .modal-body h3 {
+        margin-top: 1.46rem;
+        font-family: 'Brasilia';
+        color: #004D99; }
+      #iOS-modal .modal-content .modal-body p {
+        color: #777;
+        font-size: 1.5rem; }
+      #iOS-modal .modal-content .modal-body .email-input {
+        display: inline;
+        position: relative;
+        margin-right: 2%;
+        text-align: left; }
+        #iOS-modal .modal-content .modal-body .email-input label {
+          position: absolute;
+          top: -2px;
+          left: 30px; }
+          #iOS-modal .modal-content .modal-body .email-input label img {
+            width: 72%; }
+        #iOS-modal .modal-content .modal-body .email-input input {
+          background: #fff;
+          border-radius: 50px;
+          width: 70%;
+          border: 3px solid #e6e6e6 !important;
+          height: 70px;
+          border: 0;
+          padding-left: 90px;
+          color: #004D99;
+          box-sizing: border-box; }
+          #iOS-modal .modal-content .modal-body .email-input input:focus {
+            border: 0;
+            box-shadow: none; }
+      #iOS-modal .modal-content .modal-body button {
+        width: 25%;
+        height: 70px;
+        line-height: 70px;
+        background: #004D99;
+        color: #fff;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1.8rem; }
+      #iOS-modal .modal-content .modal-body .subscribtion-result {
+        color: rgba(0, 0, 0, 0.87); }

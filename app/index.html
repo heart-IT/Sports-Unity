@@ -57,8 +57,8 @@
 	<div class="more-from-app section">
 		<div class="container">
 			<div class="row heading-row">
-				<div class="col s12 m12">
-					<h3>Divided by Fanship, United by Sports Unity</h3>
+				<div class="col s12">
+					<h3>Divided by Fanship, United by Sports</h3>
 					<div class="divider"></div>
 					<p>You have reasons galore to make Sports Unity your go-to sports app.</p>
 				</div>
@@ -169,11 +169,11 @@
 	<div class="live-scores section">
 		<div class="container">
 			<div class="row heading-row">
-				<div class="col s12 m12">
+				<div class="col s12">
 					<h3>Live Scores</h3>
 					<div class="divider"></div>
-					<p>Exchange free instant messages with friends whenever and wherever with one-on-one and group chats.
-						<br /> SportsUnity is available on Android & iOS smartphones devices.</p>
+					<p class="flow-text">Exchange free instant messages with friends whenever and wherever with one-on-one and group chats. SportsUnity is available
+						on Android & iOS smartphones devices.</p>
 				</div>
 			</div>
 			<div class="row content-row">
@@ -263,15 +263,14 @@
 				</div>
 			</div>
 			<div class="row content-row center-align">
-				<form action="http://sportsunity.us13.list-manage.com/subscribe/post-json?u=3f0ec7a8103500ebab5d8efc0&amp;id=0993866978&amp;c=?"
-				method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+				<form action="" method="get" id="general" name="mc-embedded-subscribe-form">
 					<div class="email-input">
 						<label for="mce-EMAIL" class="active"><img src="images/ic-mail-icon.svg"></label>
-						<input id="mce-EMAIL" name="EMAIL" type="email" placeholder="Your e-mail" validate="" required="">
+						<input id="mce-EMAIL" name="EMAIL" type="email" placeholder="Your e-mail" required class="validate">
 					</div>
 					<button class="btn waves-effect waves-light" type="submit" name="action" id="mc-embedded-subscribe">Go!</button>
+					<div class="subscribtion-result hide">Nothing to do</div>
 				</form>
-				<div class="subscribtion-result hide">Nothing to do</div>
 			</div>
 		</div>
 	</div>
@@ -336,15 +335,27 @@
 
 	<div id="iOS-modal" class="modal">
 		<div class="modal-content">
-			<h5>Stay tuned</h5>
-			<h4>Get an early invite</h4>
-			<p>Class aptent taciti sociosqu ad litora torquent per conubia, mauris in erat justo. Nullam ac urna eu felis dapibus.</p>
-			<form action="#">
-				<input type="text">
-				<button type="submit"></button>
-			</form>
-			<div class="modal-footer">
-				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+			<div class="modal-head">
+				<h4>Stay tuned</h4>
+				<a href="#" class="modal-action modal-close"><i class="material-icons">clear</i></a>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row">
+						<div class="col s12">
+							<h3>Get an early invite</h3>
+							<p class="flow-text">Class aptent taciti sociosqu ad litora torquent per conubia, mauris in erat justo. Nullam ac urna eu felis dapibus.</p>
+							<form action="" method="get" id="iphone" name="mc-embedded-subscribe-form">
+								<div class="email-input">
+									<label for="mce-EMAIL" class="active"><img src="images/ic-mail-icon.svg"></label>
+									<input id="mce-EMAIL" name="EMAIL" type="email" placeholder="Your e-mail" required class="validate">
+								</div>
+								<button class="btn waves-effect waves-light" type="submit" name="action" id="mc-embedded-subscribe">Go!</button>
+								<div class="subscribtion-result hide">Nothing to do</div>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

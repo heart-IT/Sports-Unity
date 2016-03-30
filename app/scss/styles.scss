@@ -283,6 +283,7 @@ nav {
 				box-sizing: border-box;
 				&:focus {
 					border: 0;
+					box-shadow: none;
 				}
 			}
 		}
@@ -296,7 +297,7 @@ nav {
 			font-weight: bold;
 			font-size: 1.8rem;
 		}
-		.result {
+		.subscribtion-result {
 			color: #fff;
 		}
 	}
@@ -347,6 +348,86 @@ footer.page-footer {
 			color: #fff;
 			@media screen and (max-width: $medium-size) {
 				display: none;
+			}
+		}
+	}
+}
+
+#iOS-modal {
+	border-radius: 6px;
+	max-width: 600px;
+	.modal-content {
+		padding: 0;
+		.modal-head {
+			border-bottom: 1px solid #c5c5c5;
+			h4 {
+				margin-top: 12px;
+				margin-bottom: 9px;
+				font-family: 'Brasilia';
+				padding: 0 24px;
+				font-size: 1.8rem;
+				color: #444;
+			}
+			.material-icons {
+				position: absolute;
+				top: 12px;
+				right: 6px;
+				color: #c5c5c5;
+			}
+		}
+		.modal-body {
+			text-align: center;
+			h3 {
+				margin-top: 1.46rem;
+				font-family: 'Brasilia';
+				color: $blue;
+			}
+			p {
+				color: #777;
+				font-size: 1.5rem;
+			}
+			.email-input {
+				display: inline;
+				position: relative;
+				margin-right: 2%;
+				// width: 75%;
+				text-align: left;
+				label {
+					position: absolute;
+					top: -2px;
+					left: 30px;
+					img {
+						width: 72%
+					}
+				}
+				input {
+					background: #fff;
+					border-radius: 50px;
+					width: 70%;
+					border: 3px solid #e6e6e6!important;
+					height: 70px;
+					border: 0;
+					padding-left: 90px;
+					color: $blue;
+					box-sizing: border-box;
+					&:focus {
+						border: 0;
+						box-shadow: none;
+					}
+				}
+			}
+			button {
+				width: 25%;
+				height: 70px;
+				line-height: 70px;
+				background: $blue;
+				color: #fff;
+				border-radius: 50px;
+				font-weight: bold;
+				font-size: 1.8rem;
+			}
+			.subscribtion-result {
+				color: rgba(0, 0, 0, 0.87);
 			}
 		}
 	}

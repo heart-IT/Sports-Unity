@@ -4,7 +4,31 @@
 $(document).ready(function () {
 	convertIconToSvg();
 
-	activateMailChimpForm();
+	$('form').submit(function(event) {
+		// mc-embedded-subscribe-form-2
+		var $form= $(this);
+		var id= $form.attr('id');
+		var formData= {
+			email: $form.find('input[type="email"]').val(),
+			type: id
+		}
+
+		$.ajax({
+			type: 'POST',
+			url: 'http://54.255.175.45:8080/store',
+			data: formData,
+			dataType: 'json'
+		}).done(function() {
+		});
+		$form.find('.subscribtion-result').html('Thanks for your interest.').removeClass('hide');
+		setTimeout(function() {
+			$form.find('.subscribtion-result').addClass('hide');
+		}, 5000);
+		$form.find('input[type="email"]').val('');
+		event.preventDefault();
+	});
+
+	// activateMailChimpForm();
 
 	$('a[href*="#"]').on('click', function (e) {
 		// prevent default action and bubbling
@@ -63,15 +87,16 @@ function register($form) {
 
 
 function activateMailChimpForm() {
-	var $form = $('#mc-embedded-subscribe-form');
 
-	$('#mc-embedded-subscribe').on('click', function (event) {
-		if (event) event.preventDefault();
-		// if(validate_input($form)) {
-		// 	register($form);
-		// }
-		register($form);
-	});
+	// var $form = $('#mc-embedded-subscribe-form');
+
+	// $('#mc-embedded-subscribe').on('click', function (event) {
+	// 	if (event) event.preventDefault();
+	// 	// if(validate_input($form)) {
+	// 	// 	register($form);
+	// 	// }
+	// 	register($form);
+	// });
 }
 
 function startConnectSlider() {
