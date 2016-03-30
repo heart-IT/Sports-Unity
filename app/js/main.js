@@ -34,10 +34,10 @@ $(document).ready(function () {
 	];
 	Materialize.scrollFire(options);
 
-	$('.content-row .section h5').click(function(e) {
+	$('.content-row .section h5').click(function (e) {
 		e.preventDefault();
-		var index= $(this).attr('data-attr') ? $(this).attr('data-attr') : $(this).closest('.section').index();
-		var slider= $(this).closest('.content-row').find('.slider');
+		var index = $(this).attr('data-attr') ? $(this).attr('data-attr') : $(this).closest('.section').index();
+		var slider = $(this).closest('.content-row').find('.slider');
 		$(slider).slider('goTo', index);
 	});
 
@@ -51,7 +51,7 @@ function register($form) {
 		cache: false,
 		dataType: 'json',
 		contentType: "application/json; charset=utf-8",
-	}).done(function() {
+	}).done(function () {
 		$('.result').html('Thanks for your interest.').removeClass('hide');
 		$("#mce-EMAIL").val('');
 	});
