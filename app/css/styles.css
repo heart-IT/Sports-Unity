@@ -199,39 +199,40 @@ nav {
 .subscribe {
   background-image: url("../images/subscribe-forupdate-bg.png");
   background-repeat: no-repeat;
-  background-position: center bottom; }
-  .subscribe .content-row .email-input {
-    display: inline;
-    position: relative;
-    margin-right: 2rem; }
-    .subscribe .content-row .email-input label {
+  background-position: center bottom;
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .subscribe .content-row .input-field {
+    width: 72%;
+    display: inline-block; }
+    .subscribe .content-row .input-field label {
       position: absolute;
-      top: -2px;
-      left: 30px; }
-      .subscribe .content-row .email-input label img {
-        width: 80%; }
-    .subscribe .content-row .email-input input {
-      max-width: 600px;
-      background: white;
-      border-radius: 50px;
-      height: 70px;
+      top: 20px;
+      left: 40px; }
+    .subscribe .content-row .input-field input {
+      background-color: #fff;
       border: 0;
-      padding-left: 90px;
-      color: #004D99; }
-      .subscribe .content-row .email-input input:focus {
+      border-radius: 50px;
+      box-sizing: border-box;
+      color: #004D99;
+      height: 70px;
+      padding-left: 15px;
+      outline: none;
+      width: 100%; }
+      .subscribe .content-row .input-field input:focus {
         border: 0; }
-      @media screen and (max-width: 600px) {
-        .subscribe .content-row .email-input input {
-          max-width: 64%; } }
   .subscribe .content-row button {
-    width: 200px;
-    height: 70px;
-    line-height: 70px;
-    background: white;
-    color: #004D99;
+    background-color: #fff;
+    border: 0;
     border-radius: 50px;
+    color: #004D99;
+    font-size: 1.2rem;
     font-weight: bold;
-    font-size: 1.8rem; }
+    height: 70px;
+    margin-left: 2%;
+    outline: none;
+    top: -1px;
+    width: 18%; }
   .subscribe .content-row .result {
     color: #fff; }
 
