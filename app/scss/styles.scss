@@ -4,6 +4,9 @@
 }
 $blue: #004D99;
 
+$small-size: 600px;
+$medium-size: 992px;
+
 // MAterialize Over Rides
 body {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -44,6 +47,9 @@ body > .section {
 	&.for-the-people {
 		padding-top: 200px;
 		padding-bottom: 0;
+		@media screen and (max-width: $small-size) {
+			padding-top: 130px;
+		}
 	}
 	&.subscribe {
 		padding-bottom: 120px;
@@ -97,9 +103,11 @@ nav {
 		padding-bottom: 25px;
 		.brand-logo {
 			height: 70px;	//dimensions of brand logo svg
-			width: 183px;
 			img {
 				height: 100%; width: 100%;
+			}
+			@media screen and (max-width: $small-size) {
+				height: 50px;
 			}
 		}
 		ul a {
@@ -116,6 +124,7 @@ nav {
 .for-the-people {
 	background-image: url('../images/sports-unity-hero-banner.jpg');
 	background-size: cover;
+	background-position: center;
 	.phone-section {
 		height: 574px;
 		.banner-phone {
@@ -142,13 +151,26 @@ nav {
 			font-size: 5.7rem;
 			line-height: 140%;
 			font-family: 'Brasilia';
+			@media screen and (max-width: $small-size) {
+				font-size: 4rem;
+				line-height: 125%;
+			}
 		}
 		p {
 			font-size: 1.5rem;
 			font-weight: 300;
+			@media screen and (max-width: $small-size) {
+				font-size: 1.2rem;
+			}
 		}
 		a {
 			margin-right: 24px;
+			@media screen and (max-width: $small-size) {
+				margin-right: 0;
+			}
+		}
+		@media screen and (max-width: $small-size) {
+			text-align: center;
 		}
 	}
 }
@@ -214,6 +236,9 @@ nav {
 				fill: #004D99;
 			}
 		}
+		@media screen and (max-width: $small-size) {
+			text-align: center;
+		}
 	}
 }
 
@@ -272,6 +297,9 @@ nav {
 				// &::-moz-placeholder::before  { font-family: fontAwesome; content:'\f0e0  '; color: #CACACA } /* firefox 19+ */
 				// &:-ms-input-placeholder::before  { font-family: fontAwesome; content:'\f0e0  '; color: #CACACA } /* ie */
 				// &:-moz-placeholder::before  { font-family: fontAwesome; content:'\f0e0  '; color: #CACACA }
+				@media screen and (max-width: $small-size) {
+					max-width: 64%;
+				}
 			}
 		}
 		button {
@@ -301,6 +329,9 @@ nav {
 .downloads {
 	a {
 		margin: 0 36px;
+		@media screen and (max-width: $small-size) {
+			margin: 12px auto;
+		}
 	}
 }
 

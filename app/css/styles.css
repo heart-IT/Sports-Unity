@@ -29,6 +29,9 @@ body > .section {
   body > .section.for-the-people {
     padding-top: 200px;
     padding-bottom: 0; }
+    @media screen and (max-width: 600px) {
+      body > .section.for-the-people {
+        padding-top: 130px; } }
   body > .section.subscribe {
     padding-bottom: 120px; }
   body > .section .heading-row {
@@ -62,11 +65,13 @@ nav {
     padding-top: 25px;
     padding-bottom: 25px; }
     nav .nav-wrapper .brand-logo {
-      height: 70px;
-      width: 183px; }
+      height: 70px; }
       nav .nav-wrapper .brand-logo img {
         height: 100%;
         width: 100%; }
+      @media screen and (max-width: 600px) {
+        nav .nav-wrapper .brand-logo {
+          height: 50px; } }
     nav .nav-wrapper ul a {
       font-family: 'Brasilia';
       font-size: 1.2rem; }
@@ -75,7 +80,8 @@ nav {
 
 .for-the-people {
   background-image: url("../images/sports-unity-hero-banner.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   .for-the-people .phone-section {
     height: 574px; }
     .for-the-people .phone-section .banner-phone {
@@ -99,11 +105,24 @@ nav {
       font-size: 5.7rem;
       line-height: 140%;
       font-family: 'Brasilia'; }
+      @media screen and (max-width: 600px) {
+        .for-the-people .content-section h1 {
+          font-size: 4rem;
+          line-height: 125%; } }
     .for-the-people .content-section p {
       font-size: 1.5rem;
       font-weight: 300; }
+      @media screen and (max-width: 600px) {
+        .for-the-people .content-section p {
+          font-size: 1.2rem; } }
     .for-the-people .content-section a {
       margin-right: 24px; }
+      @media screen and (max-width: 600px) {
+        .for-the-people .content-section a {
+          margin-right: 0; } }
+    @media screen and (max-width: 600px) {
+      .for-the-people .content-section {
+        text-align: center; } }
 
 .more-from-app h3,
 .connect-with-friends h3,
@@ -161,6 +180,10 @@ nav {
 .more-from-app .section.active svg path {
   fill: #004D99; }
 
+@media screen and (max-width: 600px) {
+  .more-from-app .section {
+    text-align: center; } }
+
 .live-scores .content-row .section h5 {
   color: #fff; }
 
@@ -197,6 +220,9 @@ nav {
       color: #004D99; }
       .subscribe .content-row .email-input input:focus {
         border: 0; }
+      @media screen and (max-width: 600px) {
+        .subscribe .content-row .email-input input {
+          max-width: 64%; } }
   .subscribe .content-row button {
     width: 200px;
     height: 70px;
@@ -214,6 +240,9 @@ nav {
 
 .downloads a {
   margin: 0 36px; }
+  @media screen and (max-width: 600px) {
+    .downloads a {
+      margin: 12px auto; } }
 
 footer.page-footer {
   padding-top: 0;
