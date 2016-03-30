@@ -1,49 +1,37 @@
+$blue: #004D99;
+$smallest-size: 360px;
+$small-size: 600px;
+$small-medium-size: 720px;
+$medium-size: 992px;
+
 @font-face {
 	font-family: 'Brasilia';
 	src: url('../fonts/Brasilia.ttf');
 }
-$blue: #004D99;
 
-$small-size: 600px;
-$medium-size: 992px;
+// MaterializeCSS
+body { font-family: 'Roboto Condensed', sans-serif; }
+@media screen and (min-width: $medium-size) { .container { width: 85%; } }
 
-// MAterialize Over Rides
-body {
-	font-family: 'Roboto Condensed', sans-serif;
-}
-.container {
-	width: 85%;
-}
-.slider {
-	height: 640px;
-	.slides {
-		background-color: transparent;
-		li img {
-			background-size: contain;
-			background-repeat: no-repeat;
-		}
+.slider { height: 640px;
+	.slides { background-color: transparent;
+		li img { background-size: contain; background-repeat: no-repeat; }
 	}
 	.indicators {
-		.indicator-item {
-			height: 8px;
-			width: 8px;
-			&.active {
-				background-color: $blue;
-			}
+		.indicator-item { height: 8px; width: 8px;
+			&.active { background-color: $blue; }
 		}
 	}
 	&:not(.connect-with-friends-slider)  {
-		.indicators {
-			right: 20%;
-		}
+		.indicators { right: 20%; }
 	}
 }
 
 
 // Common CSS
 body > .section {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	// padding-top: 50px;
+	// padding-bottom: 50px;
 	&.for-the-people {
 		padding-top: 200px;
 		padding-bottom: 0;
@@ -336,19 +324,35 @@ nav {
 }
 
 footer.page-footer {
-	padding-top: 0; //overriding materialize padding
+	padding-top: 0;
 	background-color: $blue;
 	color: #fff;
+	@media screen and (max-width: $medium-size) {
+		text-align: center;
+	}
 	.footer-copyright {
-		height: 84px;
-		line-height: 84px;
+		height: 90px;
+		line-height: 90px;
 		font-weight: bold;
-		.sports-unity-logo {
-			height: 48px;
-			vertical-align: middle;
-			margin-right: 18px;
+		@media screen and (max-width: $small-size) {
+			line-height: 45px;
 		}
-		a {
+		.footer-brand-link {
+			@media screen and (max-width: $small-size) {
+				display: block;
+			}
+			.sports-unity-logo {
+				height: 45px;
+				margin-right: 1rem;
+				vertical-align: middle;
+				@media screen and (max-width: $small-size) {
+					height: 36px;
+					margin-right: 0;
+					margin-top: 9px;
+				}
+			}
+		}
+		a.footer-nav {
 			font-family: "Brasilia";
 			margin-left: 12px;
 			margin-right: 12px;
