@@ -22,6 +22,8 @@ $(document).ready(function () {
 
 	$(".button-collapse").sideNav();
 
+	$('.modal-trigger').leanModal();
+
 	$(".more-from-app-slider").slider({ height: '600px', interval: 2000 });
 	$('.more-from-app-slider').slider('pause');
 	$(".live-score-slider").slider({ height: '600px', interval: 2000 });
