@@ -1,17 +1,108 @@
-$blue: #004D99;
-$smallest-size: 360px;
-$small-size: 600px;
-$small-medium-size: 720px;
-$medium-size: 992px;
-
 @font-face {
 	font-family: 'Brasilia';
 	src: url('../fonts/Brasilia.ttf');
 }
 
-// MaterializeCSS
-body { font-family: 'Roboto Condensed', sans-serif; }
-@media screen and (min-width: $medium-size) { .container { width: 85%; } }
+@import 'variables';
+
+body {
+	font-family: $body-font;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font;
+}
+
+// LETS BEGIN THE CSS B-------
+
+// Nav bar CSS
+nav {
+	position: absolute; top: 0; left: 0;
+	background-color: transparent; box-shadow: none;
+	height: 112px;
+	@media screen and (max-width: $phone-landscape) {
+		height: 90px;
+	}
+	.nav-wrapper {
+		padding-top: 42px;
+		@media screen and (max-width: $phone-landscape) { padding-top: 21px; }
+		.brand-logo {
+			height: 70px; width: 180px;	//dimensions of brand logo svg
+			@media screen and (max-width: $tablet-landscape) { height: 60px; width: 154px; }
+			@media screen and (max-width: $phone-landscape) { height: 50px; width: 128px; }
+			img { height: 100%; width: 100%; }
+		}
+		.button-collapse {
+			@media screen and (max-width: $tablet-landscape) {
+				height: 60px;
+				i { font-size: 2.4rem; height: 60px; line-height: 60px; }
+			}
+			@media screen and (max-width: $phone-landscape) {
+				height: 50px;
+				i { font-size: 2rem; height: 50px; line-height: 50px; }
+			}
+		}
+		ul a {
+			font-family: $heading-font; font-size: 1.2rem;
+			text-transform: uppercase;
+			&:hover { background-color: transparent; }
+		}
+	}
+}
+
+
+// For the People
+.for-the-people {
+	background: url(../images/sports-unity-hero-banner.jpg) no-repeat center center fixed;
+	background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;
+	.phone-section {
+		height: 574px;
+		.banner-phone {
+			background-image: url('../images/sportsunity-phone.png');
+			background-repeat: no-repeat;
+			height: 574px;
+			width: 320px;
+			position: relative;
+			margin: 0 auto;
+			img {
+				position: absolute;
+				width: 293px;
+				height: 515px;
+				top: 59px;
+				left: 13px;
+				overflow: hidden;
+				z-index: 2;
+			}
+		}
+	}
+	.content-section {
+		color: #fff;
+		h1 {
+			font-size: 5.7rem;
+			line-height: 140%;
+			font-family: 'Brasilia';
+			@media screen and (max-width: $small-size) {
+				font-size: 4rem;
+				line-height: 125%;
+			}
+		}
+		p {
+			font-size: 1.5rem;
+			font-weight: 300;
+			@media screen and (max-width: $small-size) {
+				font-size: 1.2rem;
+			}
+		}
+		a {
+			margin-right: 24px;
+			@media screen and (max-width: $small-size) {
+				margin-right: 0;
+			}
+		}
+		@media screen and (max-width: $small-size) {
+			text-align: center;
+		}
+	}
+}
 
 .slider { height: 640px;
 	.slides { background-color: transparent;
@@ -73,92 +164,6 @@ body > .section {
 			@media screen and (max-width: $small-size) {
 				text-align: center;
 			}
-		}
-	}
-}
-
-
-
-// Nav bar CSS
-nav {
-	background-color: transparent;
-	box-shadow: none;
-	position: absolute;
-	top: 0;
-	height: 120px;
-	.nav-wrapper {
-		padding-top: 25px;
-		padding-bottom: 25px;
-		.brand-logo {
-			height: 70px;	//dimensions of brand logo svg
-			img {
-				height: 100%; width: 100%;
-			}
-			@media screen and (max-width: $small-size) {
-				height: 50px;
-			}
-		}
-		ul a {
-			font-family: 'Brasilia';
-			font-size: 1.2rem;
-			&:hover {
-				background-color: transparent;
-			}
-		}
-	}
-}
-
-// For the People
-.for-the-people {
-	background-image: url('../images/sports-unity-hero-banner.jpg');
-	background-size: cover;
-	background-position: center;
-	.phone-section {
-		height: 574px;
-		.banner-phone {
-			background-image: url('../images/sportsunity-phone.png');
-			background-repeat: no-repeat;
-			height: 574px;
-			width: 320px;
-			position: relative;
-			margin: 0 auto;
-			img {
-				position: absolute;
-				width: 293px;
-				height: 515px;
-				top: 59px;
-				left: 13px;
-				overflow: hidden;
-				z-index: 2;
-			}
-		}
-	}
-	.content-section {
-		color: #fff;
-		h1 {
-			font-size: 5.7rem;
-			line-height: 140%;
-			font-family: 'Brasilia';
-			@media screen and (max-width: $small-size) {
-				font-size: 4rem;
-				line-height: 125%;
-			}
-		}
-		p {
-			font-size: 1.5rem;
-			font-weight: 300;
-			@media screen and (max-width: $small-size) {
-				font-size: 1.2rem;
-			}
-		}
-		a {
-			margin-right: 24px;
-			@media screen and (max-width: $small-size) {
-				margin-right: 0;
-			}
-		}
-		@media screen and (max-width: $small-size) {
-			text-align: center;
 		}
 	}
 }
@@ -347,87 +352,7 @@ footer.page-footer {
 			margin-right: 12px;
 			color: #fff;
 			@media screen and (max-width: $medium-size) {
-				display: none;
-			}
-		}
-	}
-}
-
-#iOS-modal {
-	border-radius: 6px;
-	max-width: 600px;
-	.modal-content {
-		padding: 0;
-		.modal-head {
-			border-bottom: 1px solid #c5c5c5;
-			h4 {
-				margin-top: 12px;
-				margin-bottom: 9px;
-				font-family: 'Brasilia';
-				padding: 0 24px;
-				font-size: 1.8rem;
-				color: #444;
-			}
-			.material-icons {
-				position: absolute;
-				top: 12px;
-				right: 6px;
-				color: #c5c5c5;
-			}
-		}
-		.modal-body {
-			text-align: center;
-			h3 {
-				margin-top: 1.46rem;
-				font-family: 'Brasilia';
-				color: $blue;
-			}
-			p {
-				color: #777;
-				font-size: 1.5rem;
-			}
-			.email-input {
-				display: inline;
-				position: relative;
-				margin-right: 2%;
-				// width: 75%;
-				text-align: left;
-				label {
-					position: absolute;
-					top: -2px;
-					left: 30px;
-					img {
-						width: 72%
-					}
-				}
-				input {
-					background: #fff;
-					border-radius: 50px;
-					width: 70%;
-					border: 3px solid #e6e6e6!important;
-					height: 70px;
-					border: 0;
-					padding-left: 90px;
-					color: $blue;
-					box-sizing: border-box;
-					&:focus {
-						border: 0;
-						box-shadow: none;
-					}
-				}
-			}
-			button {
-				width: 25%;
-				height: 70px;
-				line-height: 70px;
-				background: $blue;
-				color: #fff;
-				border-radius: 50px;
-				font-weight: bold;
-				font-size: 1.8rem;
-			}
-			.subscribtion-result {
-				color: rgba(0, 0, 0, 0.87);
+				// display: none;
 			}
 		}
 	}
