@@ -8,6 +8,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Brasilia", "Roboto", sans-serif; }
 
+@media screen and (min-width: 992px) {
+  .container {
+    width: 85%; } }
+
 nav {
   position: absolute;
   top: 0;
@@ -63,7 +67,12 @@ nav {
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover; }
+  -o-background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 0px; }
+  @media screen and (min-width: 992px) {
+    .for-the-people {
+      padding-top: 200px; } }
   .for-the-people .phone-section {
     height: 574px; }
     .for-the-people .phone-section .banner-phone {
@@ -82,29 +91,33 @@ nav {
         overflow: hidden;
         z-index: 2; }
   .for-the-people .content-section {
-    color: #fff; }
+    color: #fff;
+    text-align: center;
+    padding-bottom: 30px; }
+    @media screen and (min-width: 992px) {
+      .for-the-people .content-section {
+        text-align: left;
+        padding-bottom: 0; } }
     .for-the-people .content-section h1 {
-      font-size: 5.7rem;
-      line-height: 140%;
-      font-family: 'Brasilia'; }
-      @media screen and (max-width: 600px) {
+      font-size: 4rem;
+      line-height: 130%; }
+      @media screen and (min-width: 992px) {
         .for-the-people .content-section h1 {
-          font-size: 4rem;
-          line-height: 125%; } }
+          font-size: 5.4rem;
+          line-height: 150%; } }
     .for-the-people .content-section p {
-      font-size: 1.5rem;
-      font-weight: 300; }
-      @media screen and (max-width: 600px) {
+      font-size: 1.25rem;
+      font-family: "Roboto", sans-serif; }
+      @media screen and (min-width: 992px) {
         .for-the-people .content-section p {
-          font-size: 1.2rem; } }
+          font-size: 1.4rem; } }
+      .for-the-people .content-section p span {
+        font-family: "Brasilia", "Roboto", sans-serif; }
     .for-the-people .content-section a {
-      margin-right: 24px; }
+      margin-right: 6px; }
       @media screen and (max-width: 600px) {
         .for-the-people .content-section a {
           margin-right: 0; } }
-    @media screen and (max-width: 600px) {
-      .for-the-people .content-section {
-        text-align: center; } }
 
 .slider {
   height: 640px; }
@@ -120,13 +133,6 @@ nav {
       background-color: #004D99; }
   .slider:not(.connect-with-friends-slider) .indicators {
     right: 20%; }
-
-body > .section.for-the-people {
-  padding-top: 200px;
-  padding-bottom: 0; }
-  @media screen and (max-width: 600px) {
-    body > .section.for-the-people {
-      padding-top: 130px; } }
 
 body > .section .heading-row {
   text-align: center; }
