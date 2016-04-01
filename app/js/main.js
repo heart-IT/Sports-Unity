@@ -55,9 +55,27 @@ $(document).ready(function () {
 	$(".more-from-app-slider").css("height", width*683/352+40+'px');
 	$(".more-from-app-slider").slider({ height: width*683/352, interval: 2000 });
 	$('.more-from-app-slider').slider('pause');
-	$(".live-score-slider").slider({ height: '600px', interval: 2000 });
+
+	width= $(".live-score-slider").width();
+	if(width> 320) {
+		width= 320;
+	}
+	$('.live-score-slider').css("height", width*574/320+'px');
+	$(".live-score-slider").slider({ height: width*574/320, interval: 2000, indicators: false });
 	$('.live-score-slider').slider('pause');
-	$('.connect-with-friends-slider').slider({ height: '600px', interval: 2000 });
+
+	width= $(".people-around-me-slider").width();
+	if(width> 320) {
+		width= 320;
+	}
+	$('.people-around-me-slider').css("height", width*574/320+'px');
+	$(".people-around-me-slider").slider({ height: width*574/320, interval: 2000, indicators: false });
+	$('.people-around-me-slider').slider('pause');
+
+	width= $('.connect-with-friends-slider').width();
+	// if(width> 35)
+	$('.connect-with-friends-slider').css("height", width*599/630+'px');
+	$('.connect-with-friends-slider').slider({ height: width*599/630, interval: 2000 });
 	$('.connect-with-friends-slider').slider('pause');
 
 	var options = [

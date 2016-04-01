@@ -1,0 +1,37 @@
+
+// Nav bar CSS
+nav {
+	position: absolute; top: 0; left: 0;
+	background-color: transparent; box-shadow: none;
+	height: 112px;
+	z-index: 2;
+	@media screen and (max-width: $phone-landscape) {
+		height: 90px;
+	}
+	.nav-wrapper {
+		padding-top: 42px;
+		@media screen and (max-width: $phone-landscape) { padding-top: 21px; }
+		.brand-logo {
+			height: 70px; width: 180px;	//dimensions of brand logo svg
+			@media screen and (max-width: $tablet-landscape) { height: 60px; width: 154px; }
+			@media screen and (max-width: $phone-landscape) { height: 50px; width: 128px; }
+			img { height: 100%; width: 100%; }
+		}
+		.button-collapse {
+			@media screen and (max-width: $tablet-landscape) {
+				height: 60px;
+				i { font-size: 2.4rem; height: 60px; line-height: 60px; }
+			}
+			@media screen and (max-width: $phone-landscape) {
+				height: 50px;
+				i { font-size: 2rem; height: 50px; line-height: 50px; }
+			}
+		}
+		ul a {
+			font-family: $heading-font;
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			&:hover { background-color: transparent; }
+		}
+	}
+}

@@ -14,151 +14,103 @@ h1, h2, h3, h4, h5, h6 {
 
 // LETS BEGIN THE CSS B-------
 @import 'materialize';
-@import 'phoney';
-
-.content-row {
-	@media screen and (min-width: $medium) {
-		display: flex;
-		align-items: center;
-		.section {
-			margin: 30px 0;
-			@media screen and (min-width: 1280px) {
-				margin: 40px 0;
-			}
-			@media screen and (min-width: 1440px) {
-				margin: 60px 0;
-			}
-			@media screen and (min-width: 1600px) {
-				margin: 70px 0;
-			}
-		}
-	}
-}
-
-// Nav bar CSS
-nav {
-	position: absolute; top: 0; left: 0;
-	background-color: transparent; box-shadow: none;
-	height: 112px;
-	@media screen and (max-width: $phone-landscape) {
-		height: 90px;
-	}
-	.nav-wrapper {
-		padding-top: 42px;
-		@media screen and (max-width: $phone-landscape) { padding-top: 21px; }
-		.brand-logo {
-			height: 70px; width: 180px;	//dimensions of brand logo svg
-			@media screen and (max-width: $tablet-landscape) { height: 60px; width: 154px; }
-			@media screen and (max-width: $phone-landscape) { height: 50px; width: 128px; }
-			img { height: 100%; width: 100%; }
-		}
-		.button-collapse {
-			@media screen and (max-width: $tablet-landscape) {
-				height: 60px;
-				i { font-size: 2.4rem; height: 60px; line-height: 60px; }
-			}
-			@media screen and (max-width: $phone-landscape) {
-				height: 50px;
-				i { font-size: 2rem; height: 50px; line-height: 50px; }
-			}
-		}
-		ul a {
-			font-family: $heading-font;
-			font-size: 1.2rem;
-			text-transform: uppercase;
-			&:hover { background-color: transparent; }
-		}
-	}
-}
+@import 'navbar';
 
 
-// For the People
-.for-the-people {
-	background: url(../images/sports-unity-hero-banner.jpg) no-repeat center center fixed;
-	background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;
-	padding-top: 150px;
-	padding-bottom: 0px;
-	@media screen and (min-width: $medium) {
-		padding-top: 200px;
+// Common CSS
+body > .section {
+	&.section-without-bottom-padding {
+		padding-bottom: 0;
 	}
-	position: relative;
-	.half-phone-wrapper {
-		position: relative;
-		img {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-		}
-		.half-phone-inside {
-			position: absolute;
-			left: 0;
-			bottom: 0;
-		}
-	}
-	.banner-phone {
-		position: absolute;
-		max-width: 320px;
-		background-image: url('../images/sportsunity-phone.png');
-		background-repeat: no-repeat;
-		position: relative;
-		margin: 0 auto;
-		img {
-			position: absolute;
-			width: 293px;
-			height: 515px;
-			top: 59px;
-			left: 13px;
-			overflow: hidden;
-			z-index: 2;
-		}
-	}
-	.phone-section {
-		height: 574px;
-	}
-	.content-section {
-		color: #fff;
+	.heading-row {
 		text-align: center;
-		padding-bottom: 30px;
-		@media screen and (min-width: $medium) {
-			text-align: left;
-			padding-bottom: 0;
+		h3 {
+			font-size: 40px;
 		}
-		h1 {
-			font-size: 4rem;
-			line-height: 130%;
-			@media screen and (min-width: $medium) {
-				font-size: 5.4rem;
-				line-height: 150%;
-			}
+		.divider {
+			width: 100px;
+			height: 4px;
+			margin: 24px auto;
 		}
 		p {
-			font-size: 1.25rem;
-			font-family: $plain-font;
-			@media screen and (min-width: $medium) {
-				font-size: 1.4rem;
-			}
+			font-size: 22px;
+			font-family: "Roboto Condensed";
 			span {
-				font-family: $heading-font;
+				font-weight: bold;
 			}
 		}
-		a {
-			margin-right: 6px;
-			@media screen and (max-width: $small) {
-				margin-right: 0;
+	}
+	.content-row {
+		.section {
+			h5 {
+				font-size: 30px;
+				font-family: "Brasilia";
+				// line-height: 1.4;
+ 				-moz-transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0); -webkit-transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0); -ms-transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0); transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0);
+				cursor: pointer;
+			}
+			p {
+				font-size: 16px;
+ 				font-family: "Roboto Condensed";
+ 				-moz-transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0);
+ 				-webkit-transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0);
+ 				-ms-transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0);
+				 transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0);
+			}
+			&.active {
+				h5 { color: $blue; }
+			}
+			@media screen and (max-width: $medium) {
+				text-align: center;
+			}
+		}
+	}
+	&.white-section {
+		background-color: #fff;
+		.heading-row {
+			h3 {
+ 				color: rgb(68, 68, 68);
+			}
+			.divider {
+				background-color: $blue;
+			}
+			p {
+ 				color: rgb(119, 119, 119);
+			}
+		}
+		.content-row {
+			.section {
+				h5 {
+					color: rgba(68, 68, 68, 1);
+				}
+				p {
+					color: rgb(117, 117, 117);
+				}
+			}
+			&.active {
+				h5 {
+					color: $blue;
+				}
 			}
 		}
 	}
 }
+
 
 .content-row {
 	.section {
 		position: relative;
 		box-sizing: border-box;
+		h5 {
+			@media screen and (min-width: $medium) {
+				line-height: 53px;
+			}
+		}
 		svg {
 			@media screen and (min-width: $medium) {
 				position: absolute;
-				width: 40px;
-				height: 40px;
+				width: 41px;
+				height: 53px;
 				top: 0;
 			}
 		}
@@ -202,84 +154,6 @@ nav {
 	}
 }
 
-.live-scores {
-	.section {
-		&.active {
-			svg path {
-				// b
-			}
-		}
-	}
-}
-
-
-.slider {
-	.slides { background-color: transparent;
-		li img { background-size: contain; background-repeat: no-repeat; }
-	}
-	.indicators {
-		.indicator-item { height: 8px; width: 8px; margin: 0 4px;
-			&.active { background-color: $blue; }
-		}
-	}
-	// &:not(.connect-with-friends-slider)  {
-	// 	.indicators { right: 20%; }
-	// }
-}
-
-
-// Common CSS
-body > .section {
-	// padding-top: 50px;
-	// padding-bottom: 50px;
-	// &.for-the-people {
-	// 	padding-top: 200px;
-	// 	padding-bottom: 0;
-	// 	@media screen and (max-width: $small-size) {
-	// 		padding-top: 130px;
-	// 	}
-	// }
-	.heading-row {
-		text-align: center;
-		h3 {
-			font-family: 'Brasilia';
-		}
-		.divider {
-			width: 100px;
-			height: 4px;
-			margin: 24px auto;
-		}
-		p {
-			font-size: 1.3rem;
-			font-weight: 300;
-		}
-	}
-	.content-row {
-		.section {
-			h5 {
-				font-family: 'Brasilia';
-				line-height: 150%;
-				font-size: 2rem;
-				cursor: pointer;
-			}
-			p {
-				font-size: 17px;
-			}
-			&.active {
-				h5 {
-					color: $blue;
-				}
-			}
-			@media screen and (max-width: $medium) {
-				text-align: center;
-			}
-		}
-	}
-}
-
-.people-around-me {
-	background-color: #f1f1f1;
-}
 .spread-the-word {
 	background-color: #f1f1f1
 }
@@ -319,10 +193,14 @@ body > .section {
 
 //live scores
 .live-scores {
+	background-image: -moz-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
+ 	background-image: -webkit-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
+ 	background-image: -ms-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
 	.content-row {
 		.section {
 			h5 {
 				color: #fff;
+
 			}
 			&.active {
 				h5 {
@@ -389,52 +267,15 @@ body > .section {
 	}
 }
 
-.spread-the-word {
-	.content-row {
-		a {
-			margin: 0 3px;
-		}
-	}
+.people-around-me {
+	background: url(../images/sports-icon-bg.png) repeat center center fixed;
+	background-size: cover;
 }
 
-// Footer Chhota Sa
-footer.page-footer {
-	padding-top: 0;
-	background-color: $blue;
-	color: #fff;
-	@media screen and (max-width: $medium-size) {
-		text-align: center;
-	}
-	.footer-copyright {
-		height: 90px;
-		line-height: 90px;
-		font-weight: bold;
-		@media screen and (max-width: $small-size) {
-			line-height: 45px;
-		}
-		.footer-brand-link {
-			@media screen and (max-width: $small-size) {
-				display: block;
-			}
-			.sports-unity-logo {
-				height: 45px;
-				margin-right: 1rem;
-				vertical-align: middle;
-				@media screen and (max-width: $small-size) {
-					height: 36px;
-					margin-right: 0;
-					margin-top: 9px;
-				}
-			}
-		}
-		a.footer-nav {
-			font-family: "Brasilia";
-			margin-left: 12px;
-			margin-right: 12px;
-			color: #fff;
-			@media screen and (max-width: $medium-size) {
-				// display: none;
-			}
-		}
-	}
-}
+@import 'divided';
+@import 'connect';
+
+// Spread My Words.
+.spread-the-word { .content-row { a { margin: 0 3px; } } }
+
+@import 'footer';

@@ -12,25 +12,18 @@ h1, h2, h3, h4, h5, h6 {
   .container {
     width: 85%; } }
 
-.phone-div {
-  background: url(../images/sportsunity-phone-full.png) no-repeat center center;
-  background-size: contain; }
+.slider .slides {
+  background-color: transparent; }
+  .slider .slides li img {
+    background-size: contain;
+    background-repeat: no-repeat; }
 
-@media screen and (min-width: 992px) {
-  .content-row {
-    display: flex;
-    align-items: center; }
-    .content-row .section {
-      margin: 30px 0; } }
-    @media screen and (min-width: 992px) and (min-width: 1280px) {
-      .content-row .section {
-        margin: 40px 0; } }
-    @media screen and (min-width: 992px) and (min-width: 1440px) {
-      .content-row .section {
-        margin: 60px 0; } }
-    @media screen and (min-width: 992px) and (min-width: 1600px) {
-      .content-row .section {
-        margin: 70px 0; } }
+.slider .indicators .indicator-item {
+  height: 8px;
+  width: 8px;
+  margin: 0 4px; }
+  .slider .indicators .indicator-item.active {
+    background-color: #004D99; }
 
 nav {
   position: absolute;
@@ -38,7 +31,8 @@ nav {
   left: 0;
   background-color: transparent;
   box-shadow: none;
-  height: 112px; }
+  height: 112px;
+  z-index: 2; }
   @media screen and (max-width: 600px) {
     nav {
       height: 90px; } }
@@ -82,82 +76,73 @@ nav {
       nav .nav-wrapper ul a:hover {
         background-color: transparent; }
 
-.for-the-people {
-  background: url(../images/sports-unity-hero-banner.jpg) no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  padding-top: 150px;
-  padding-bottom: 0px;
-  position: relative; }
-  @media screen and (min-width: 992px) {
-    .for-the-people {
-      padding-top: 200px; } }
-  .for-the-people .half-phone-wrapper {
-    position: relative; }
-    .for-the-people .half-phone-wrapper img {
-      position: absolute;
-      bottom: 0;
-      left: 0; }
-    .for-the-people .half-phone-wrapper .half-phone-inside {
-      position: absolute;
-      left: 0;
-      bottom: 0; }
-  .for-the-people .banner-phone {
-    position: absolute;
-    max-width: 320px;
-    background-image: url("../images/sportsunity-phone.png");
-    background-repeat: no-repeat;
-    position: relative;
-    margin: 0 auto; }
-    .for-the-people .banner-phone img {
-      position: absolute;
-      width: 293px;
-      height: 515px;
-      top: 59px;
-      left: 13px;
-      overflow: hidden;
-      z-index: 2; }
-  .for-the-people .phone-section {
-    height: 574px; }
-  .for-the-people .content-section {
-    color: #fff;
-    text-align: center;
-    padding-bottom: 30px; }
-    @media screen and (min-width: 992px) {
-      .for-the-people .content-section {
-        text-align: left;
-        padding-bottom: 0; } }
-    .for-the-people .content-section h1 {
-      font-size: 4rem;
-      line-height: 130%; }
-      @media screen and (min-width: 992px) {
-        .for-the-people .content-section h1 {
-          font-size: 5.4rem;
-          line-height: 150%; } }
-    .for-the-people .content-section p {
-      font-size: 1.25rem;
-      font-family: "Roboto", sans-serif; }
-      @media screen and (min-width: 992px) {
-        .for-the-people .content-section p {
-          font-size: 1.4rem; } }
-      .for-the-people .content-section p span {
-        font-family: "Brasilia", "Roboto", sans-serif; }
-    .for-the-people .content-section a {
-      margin-right: 6px; }
-      @media screen and (max-width: 600px) {
-        .for-the-people .content-section a {
-          margin-right: 0; } }
+body > .section.section-without-bottom-padding {
+  padding-bottom: 0; }
+
+body > .section .heading-row {
+  text-align: center; }
+  body > .section .heading-row h3 {
+    font-size: 40px; }
+  body > .section .heading-row .divider {
+    width: 100px;
+    height: 4px;
+    margin: 24px auto; }
+  body > .section .heading-row p {
+    font-size: 22px;
+    font-family: "Roboto Condensed"; }
+    body > .section .heading-row p span {
+      font-weight: bold; }
+
+body > .section .content-row .section h5 {
+  font-size: 30px;
+  font-family: "Brasilia";
+  -moz-transform: matrix(0.99962, 0, 0, 1.00093, 0, 0);
+  -webkit-transform: matrix(0.99962, 0, 0, 1.00093, 0, 0);
+  -ms-transform: matrix(0.99962, 0, 0, 1.00093, 0, 0);
+  transform: matrix(0.99962, 0, 0, 1.00093, 0, 0);
+  cursor: pointer; }
+
+body > .section .content-row .section p {
+  font-size: 16px;
+  font-family: "Roboto Condensed";
+  -moz-transform: matrix(0.99999, 0, 0, 1.00093, 0, 0);
+  -webkit-transform: matrix(0.99999, 0, 0, 1.00093, 0, 0);
+  -ms-transform: matrix(0.99999, 0, 0, 1.00093, 0, 0);
+  transform: matrix(0.99999, 0, 0, 1.00093, 0, 0); }
+
+body > .section .content-row .section.active h5 {
+  color: #004D99; }
+
+@media screen and (max-width: 992px) {
+  body > .section .content-row .section {
+    text-align: center; } }
+
+body > .section.white-section {
+  background-color: #fff; }
+  body > .section.white-section .heading-row h3 {
+    color: #444444; }
+  body > .section.white-section .heading-row .divider {
+    background-color: #004D99; }
+  body > .section.white-section .heading-row p {
+    color: #777777; }
+  body > .section.white-section .content-row .section h5 {
+    color: #444444; }
+  body > .section.white-section .content-row .section p {
+    color: #757575; }
+  body > .section.white-section .content-row.active h5 {
+    color: #004D99; }
 
 .content-row .section {
   position: relative;
   box-sizing: border-box; }
   @media screen and (min-width: 992px) {
+    .content-row .section h5 {
+      line-height: 53px; } }
+  @media screen and (min-width: 992px) {
     .content-row .section svg {
       position: absolute;
-      width: 40px;
-      height: 40px;
+      width: 41px;
+      height: 53px;
       top: 0; } }
   .content-row .section.section-with-right-icon {
     padding: 0 70px 0 0;
@@ -182,50 +167,6 @@ nav {
 @media screen and (max-width: 600px) {
   .more-from-app .section {
     text-align: center; } }
-
-.slider .slides {
-  background-color: transparent; }
-  .slider .slides li img {
-    background-size: contain;
-    background-repeat: no-repeat; }
-
-.slider .indicators .indicator-item {
-  height: 8px;
-  width: 8px;
-  margin: 0 4px; }
-  .slider .indicators .indicator-item.active {
-    background-color: #004D99; }
-
-body > .section .heading-row {
-  text-align: center; }
-  body > .section .heading-row h3 {
-    font-family: 'Brasilia'; }
-  body > .section .heading-row .divider {
-    width: 100px;
-    height: 4px;
-    margin: 24px auto; }
-  body > .section .heading-row p {
-    font-size: 1.3rem;
-    font-weight: 300; }
-
-body > .section .content-row .section h5 {
-  font-family: 'Brasilia';
-  line-height: 150%;
-  font-size: 2rem;
-  cursor: pointer; }
-
-body > .section .content-row .section p {
-  font-size: 17px; }
-
-body > .section .content-row .section.active h5 {
-  color: #004D99; }
-
-@media screen and (max-width: 992px) {
-  body > .section .content-row .section {
-    text-align: center; } }
-
-.people-around-me {
-  background-color: #f1f1f1; }
 
 .spread-the-word {
   background-color: #f1f1f1; }
@@ -265,16 +206,18 @@ body > .section .content-row .section.active h5 {
   .subscribe p {
     color: #fff; }
 
-.live-scores .content-row .section h5 {
-  color: #fff; }
-
-.live-scores .content-row .section.active h5 {
-  color: #fff !important; }
-
-.live-scores .content-row .indicator-item {
-  background-color: rgba(224, 224, 224, 0.53); }
-  .live-scores .content-row .indicator-item.active {
-    background-color: #fff !important; }
+.live-scores {
+  background-image: -moz-linear-gradient(90deg, #004d99 0%, #036ded 100%);
+  background-image: -webkit-linear-gradient(90deg, #004d99 0%, #036ded 100%);
+  background-image: -ms-linear-gradient(90deg, #004d99 0%, #036ded 100%); }
+  .live-scores .content-row .section h5 {
+    color: #fff; }
+  .live-scores .content-row .section.active h5 {
+    color: #fff !important; }
+  .live-scores .content-row .indicator-item {
+    background-color: rgba(224, 224, 224, 0.53); }
+    .live-scores .content-row .indicator-item.active {
+      background-color: #fff !important; }
 
 .subscribe {
   background-image: url("../images/subscribe-forupdate-bg.png");
@@ -315,6 +258,85 @@ body > .section .content-row .section.active h5 {
     font-size: 1.8rem; }
   .subscribe .content-row .subscribtion-result {
     color: #fff; }
+
+.people-around-me {
+  background: url(../images/sports-icon-bg.png) repeat center center fixed;
+  background-size: cover; }
+
+.for-the-people {
+  background: url(../images/sports-unity-hero-banner.jpg) no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 0px;
+  position: relative; }
+  @media screen and (min-width: 992px) {
+    .for-the-people {
+      padding-top: 200px; } }
+  .for-the-people .half-phone-wrapper {
+    position: relative; }
+    .for-the-people .half-phone-wrapper img {
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+    .for-the-people .half-phone-wrapper .half-phone-inside {
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+  .for-the-people .banner-phone {
+    position: absolute;
+    max-width: 320px;
+    background-image: url("../images/sportsunity-phone.png");
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto; }
+    .for-the-people .banner-phone img {
+      position: absolute;
+      width: 293px;
+      height: 515px;
+      top: 59px;
+      left: 13px;
+      overflow: hidden;
+      z-index: 2; }
+  .for-the-people .phone-section img {
+    vertical-align: bottom; }
+  .for-the-people .content-section {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 30px; }
+    @media screen and (min-width: 992px) {
+      .for-the-people .content-section {
+        text-align: left;
+        padding-bottom: 0; } }
+    .for-the-people .content-section h1 {
+      font-size: 4rem;
+      line-height: 130%;
+      text-shadow: 2.5px 4.33px 5px rgba(0, 0, 0, 0.2); }
+      @media screen and (min-width: 992px) {
+        .for-the-people .content-section h1 {
+          font-size: 90px;
+          font-family: "Brasilia";
+          color: rgba(255, 255, 255, 0.8);
+          line-height: 1.444; } }
+    .for-the-people .content-section p {
+      font-size: 1.25rem;
+      font-family: "Roboto", sans-serif; }
+      @media screen and (min-width: 992px) {
+        .for-the-people .content-section p {
+          font-size: 20px;
+          font-family: "Roboto";
+          color: white;
+          line-height: 1.4;
+          text-align: left; } }
+      .for-the-people .content-section p span {
+        font-family: "Brasilia", "Roboto", sans-serif; }
+    .for-the-people .content-section a {
+      margin-right: 6px; }
+      @media screen and (max-width: 600px) {
+        .for-the-people .content-section a {
+          margin-right: 0; } }
 
 .spread-the-word .content-row a {
   margin: 0 3px; }

@@ -3,3 +3,14 @@
 		width: 85%;
 	}
 }
+
+.slider {
+	.slides { background-color: transparent;
+		li img { background-size: contain; background-repeat: no-repeat; }
+	}
+	.indicators {
+		.indicator-item { height: 8px; width: 8px; margin: 0 4px;
+			&.active { background-color: $blue; }
+		}
+	}
+}
