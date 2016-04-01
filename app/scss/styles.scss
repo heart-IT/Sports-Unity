@@ -14,88 +14,48 @@ h1, h2, h3, h4, h5, h6 {
 
 // LETS BEGIN THE CSS B-------
 @import 'materialize';
-@import 'navbar';
-
 
 // Common CSS
 body > .section {
-	&.section-without-bottom-padding {
-		padding-bottom: 0;
-	}
+	background-color: #fff;
+	&.section-without-bottom-padding { padding-bottom: 0; }
 	.heading-row {
 		text-align: center;
-		h3 {
-			font-size: 40px;
-		}
-		.divider {
-			width: 100px;
-			height: 4px;
-			margin: 24px auto;
-		}
-		p {
-			font-size: 22px;
-			font-family: "Roboto Condensed";
-			span {
-				font-weight: bold;
-			}
+		h3 { font-size: 40px; line-height: 125%; color: rgb(68, 68, 68); }
+		.divider { width: 100px; height: 4px; margin: 24px auto; background-color: $blue; }
+		p { font-size: 22px; font-family: $body-font; color: rgb(119, 119, 119);
+			span { font-weight: bold; }
 		}
 	}
 	.content-row {
 		.section {
-			h5 {
-				font-size: 30px;
-				font-family: "Brasilia";
-				// line-height: 1.4;
- 				-moz-transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0); -webkit-transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0); -ms-transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0); transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0);
+			@media screen and (max-width: $medium) { text-align: center; }
+			h5 { font-size: 30px; line-height: 125%; font-family: $heading-font; color: rgb(68, 68, 68);
 				cursor: pointer;
+ 				-moz-transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0); -webkit-transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0); -ms-transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0); transform: matrix( 0.99962181378111,0,0,1.00092850510678,0,0);
 			}
 			p {
-				font-size: 16px;
- 				font-family: "Roboto Condensed";
- 				-moz-transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0);
- 				-webkit-transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0);
- 				-ms-transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0);
-				 transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0);
+				font-size: 16px; font-family: $body-font; color: rgb(119, 119, 119);
+ 				-moz-transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0); -webkit-transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0); -ms-transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0); transform: matrix( 0.99998770901809,0,0,1.00092850510678,0,0);
 			}
-			&.active {
-				h5 { color: $blue; }
-			}
-			@media screen and (max-width: $medium) {
-				text-align: center;
-			}
+			&.active { h5 { color: $blue; } }
 		}
 	}
-	&.white-section {
-		background-color: #fff;
+	&.blue-section {
+		background-color: $blue;
 		.heading-row {
-			h3 {
- 				color: rgb(68, 68, 68);
-			}
-			.divider {
-				background-color: $blue;
-			}
-			p {
- 				color: rgb(119, 119, 119);
-			}
+			h3 { color: #fff; }
+			.divider { background-color: #fff; }
+			p { color: #fff; }
 		}
 		.content-row {
 			.section {
-				h5 {
-					color: rgba(68, 68, 68, 1);
-				}
-				p {
-					color: rgb(117, 117, 117);
-				}
-			}
-			&.active {
-				h5 {
-					color: $blue;
-				}
+				h5 { color: #fff; }
+				p { color: #fff; }
 			}
 		}
 	}
 }
-
 
 .content-row {
 	.section {
@@ -106,24 +66,28 @@ body > .section {
 				line-height: 53px;
 			}
 		}
-		svg {
+		svg,
+		img {
+			margin: 0 auto;
 			@media screen and (min-width: $medium) {
 				position: absolute;
-				width: 41px;
-				height: 53px;
-				top: 0;
+				width: 45px;
+				height: 45px;
+				top: 23px;
 			}
 		}
 		&.section-with-right-icon {
-			padding: 0 70px 0 0;
+			padding-right: 90px;
 			text-align: right;
-			svg {
+			svg,
+			img {
 				right: 15px;
 			}
 		}
 		&.section-with-left-icon {
-			padding: 0 0 0 70px;
-			svg {
+			padding-left: 90px;
+			svg,
+			img {
 				left: 15px;
 			}
 		}
@@ -133,96 +97,56 @@ body > .section {
 				padding: 0;
 			}
 		}
-	}
-}
-
-// more from apps
-.more-from-app {
-	.section {
-		h5 {
-			color: #444;
-			margin-top: 1.84rem;
+		img.sports-unity-li-icon.selected {
+			display: none;
 		}
 		&.active {
 			svg path {
-				fill: #004D99;
+				fill: $blue;
+			}
+			img.sports-unity-li-icon.not-selected {
+				display: none;
+			}
+			img.sports-unity-li-icon.selected {
+				display: block;
 			}
 		}
-		@media screen and (max-width: $small-size) {
-			text-align: center;
-		}
-	}
-}
-
-.spread-the-word {
-	background-color: #f1f1f1
-}
-.more-from-app,
-.connect-with-friends,
-.spread-the-word,
-.people-around-me,
-.downloads {
-	h3 {
-		color: #444444;
-		line-height: 150%;
-	}
-	.divider {
-		background-color: #004D99;
-	}
-	p {
-		color: #777777;
-	}
-}
-
-.live-scores,
-.subscribe {
-	background-color: #004D99;
-	h3 {
-		color: #fff;
-	}
-	.divider {
-		background-color: #fff;
-	}
-	p {
-		color: #fff;
 	}
 }
 
 
 
+
+@import 'navbar';
+@import 'banner';
 
 //live scores
 .live-scores {
 	background-image: -moz-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
  	background-image: -webkit-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
  	background-image: -ms-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
-	.content-row {
-		.section {
-			h5 {
-				color: #fff;
-
-			}
-			&.active {
-				h5 {
-					color: #fff!important;
-				}
-			}
-		}
-		.indicator-item {
-			background-color: rgba(224, 224, 224, 0.53);
-			&.active {
-				background-color: #fff!important;
-			}
-		}
-	}
 }
 
+.people-around-me {
+	background-color: #F1F1F1!important;
+	// background: url(../images/sports-icon-bg.png) repeat center center fixed;
+	background-size: cover;
+}
+
+
+@import 'connect';
+
+
+.spread-the-word {
+	background-color: #f1f1f1;
+	.content-row { a { margin: 0 3px; } }
+}
+
+
 .subscribe {
-	background-image: url('../images/subscribe-forupdate-bg.png');
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	padding-top: 60px;
-	padding-bottom: 60px;
+	background: url('../images/subscribe-forupdate-bg.png') no-repeat center bottom;
+	padding-top: 45px;
+	padding-bottom: 45px;
 	.content-row {
 		.email-input {
 			display: inline;
@@ -267,15 +191,77 @@ body > .section {
 	}
 }
 
-.people-around-me {
-	background: url(../images/sports-icon-bg.png) repeat center center fixed;
-	background-size: cover;
-}
-
-@import 'divided';
-@import 'connect';
-
-// Spread My Words.
-.spread-the-word { .content-row { a { margin: 0 3px; } } }
-
 @import 'footer';
+
+.modal {
+	max-width: 600px;
+	border-radius: 6px;
+	.modal-content {
+		padding: 0;
+		.modal-head {
+			position: relative;
+			padding-left: 24px;
+			padding-right: 24px;
+			border-bottom: 1px solid #f0f0f0;
+			h4 {
+				margin: 1.14rem 0 0.912rem 0;
+			}
+			.modal-close {
+				position: absolute;
+				right: 12px;
+				top: 0;
+			}
+		}
+		.modal-body {
+			text-align: center;
+			h3 {
+				margin: 1.46rem 0 1.168rem 0;
+				color: $blue;
+			}
+			p {
+				font-size: 1.3rem;
+				color: rgba(0, 0, 0, 0.54);
+			}
+			.email-input {
+				display: inline;
+				position: relative;
+				margin-right: 1rem;
+				text-align: left;
+				label {
+					position: absolute;
+					top: -2px;
+					left: 30px;
+					img {
+						width: 72%
+					}
+				}
+				input {
+					max-width: 352px;
+					background: #fff;
+					border-radius: 50px;
+					height: 70px;
+					border: 0;
+					padding-left: 90px;
+					color: $blue;
+					box-sizing: border-box;
+					&:focus {
+						border: 0;
+						box-shadow: none;
+					}
+				}
+			}
+			button {
+				width: 120px;
+				height: 70px;
+				line-height: 70px;
+				background: #fff;
+				color: $blue;
+				border-radius: 50px;
+				font-weight: bold;
+				font-size: 1.8rem;
+			}
+
+		}
+	}
+
+}

@@ -1,7 +1,11 @@
 /* global Materialize */
 /* global $ */
 /* global jQuery */
+
+
 $(document).ready(function () {
+
+
 	convertIconToSvg();
 
 	$('form').submit(function(event) {

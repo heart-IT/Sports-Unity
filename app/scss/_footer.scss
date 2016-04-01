@@ -1,42 +1,37 @@
 
 // Footer Chhota Sa
 footer.page-footer {
-	padding-top: 0;
-	background-color: $blue;
-	color: #fff;
-	@media screen and (max-width: $medium-size) {
-		text-align: center;
+	padding-top: 0; background-color: $blue; color: #fff;
+	font-size: 14px;
+	text-align: center;
+	@media screen and (min-width: $medium) {
+		text-align: left;
 	}
 	.footer-copyright {
-		height: 90px;
-		line-height: 90px;
+		height: auto;
 		font-weight: bold;
-		@media screen and (max-width: $small-size) {
-			line-height: 45px;
+		@media screen and (min-width: $medium) {
+			height: 80px;
+			line-height: 80px;
 		}
 		.footer-brand-link {
-			@media screen and (max-width: $small-size) {
+			margin-top: 12px;
+			@media screen and (max-width: $medium) {
 				display: block;
 			}
 			.sports-unity-logo {
-				height: 45px;
-				margin-right: 1rem;
+				height: 36px;
 				vertical-align: middle;
-				@media screen and (max-width: $small-size) {
-					height: 36px;
-					margin-right: 0;
-					margin-top: 9px;
+				@media screen and (min-width: $medium) {
+					height: 45px;
+					margin-right: 1rem;
 				}
 			}
 		}
 		a.footer-nav {
-			font-family: "Brasilia";
-			margin-left: 12px;
-			margin-right: 12px;
+			font-family: $heading-font;
+			margin: 0 6px;
 			color: #fff;
-			@media screen and (max-width: $medium-size) {
-				// display: none;
-			}
 		}
 	}
 }

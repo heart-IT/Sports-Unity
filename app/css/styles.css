@@ -25,14 +25,109 @@ h1, h2, h3, h4, h5, h6 {
   .slider .indicators .indicator-item.active {
     background-color: #004D99; }
 
+body > .section {
+  background-color: #fff; }
+  body > .section.section-without-bottom-padding {
+    padding-bottom: 0; }
+  body > .section .heading-row {
+    text-align: center; }
+    body > .section .heading-row h3 {
+      font-size: 40px;
+      line-height: 125%;
+      color: #444444; }
+    body > .section .heading-row .divider {
+      width: 100px;
+      height: 4px;
+      margin: 24px auto;
+      background-color: #004D99; }
+    body > .section .heading-row p {
+      font-size: 22px;
+      font-family: "Roboto Condensed", "Roboto", sans-serif;
+      color: #777777; }
+      body > .section .heading-row p span {
+        font-weight: bold; }
+  @media screen and (max-width: 992px) {
+    body > .section .content-row .section {
+      text-align: center; } }
+  body > .section .content-row .section h5 {
+    font-size: 30px;
+    line-height: 125%;
+    font-family: "Brasilia", "Roboto", sans-serif;
+    color: #444444;
+    cursor: pointer;
+    -moz-transform: matrix(0.99962, 0, 0, 1.00093, 0, 0);
+    -webkit-transform: matrix(0.99962, 0, 0, 1.00093, 0, 0);
+    -ms-transform: matrix(0.99962, 0, 0, 1.00093, 0, 0);
+    transform: matrix(0.99962, 0, 0, 1.00093, 0, 0); }
+  body > .section .content-row .section p {
+    font-size: 16px;
+    font-family: "Roboto Condensed", "Roboto", sans-serif;
+    color: #777777;
+    -moz-transform: matrix(0.99999, 0, 0, 1.00093, 0, 0);
+    -webkit-transform: matrix(0.99999, 0, 0, 1.00093, 0, 0);
+    -ms-transform: matrix(0.99999, 0, 0, 1.00093, 0, 0);
+    transform: matrix(0.99999, 0, 0, 1.00093, 0, 0); }
+  body > .section .content-row .section.active h5 {
+    color: #004D99; }
+  body > .section.blue-section {
+    background-color: #004D99; }
+    body > .section.blue-section .heading-row h3 {
+      color: #fff; }
+    body > .section.blue-section .heading-row .divider {
+      background-color: #fff; }
+    body > .section.blue-section .heading-row p {
+      color: #fff; }
+    body > .section.blue-section .content-row .section h5 {
+      color: #fff; }
+    body > .section.blue-section .content-row .section p {
+      color: #fff; }
+
+.content-row .section {
+  position: relative;
+  box-sizing: border-box; }
+  @media screen and (min-width: 992px) {
+    .content-row .section h5 {
+      line-height: 53px; } }
+  .content-row .section svg,
+  .content-row .section img {
+    margin: 0 auto; }
+    @media screen and (min-width: 992px) {
+      .content-row .section svg,
+      .content-row .section img {
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        top: 23px; } }
+  .content-row .section.section-with-right-icon {
+    padding-right: 90px;
+    text-align: right; }
+    .content-row .section.section-with-right-icon svg,
+    .content-row .section.section-with-right-icon img {
+      right: 15px; }
+  .content-row .section.section-with-left-icon {
+    padding-left: 90px; }
+    .content-row .section.section-with-left-icon svg,
+    .content-row .section.section-with-left-icon img {
+      left: 15px; }
+  @media screen and (max-width: 992px) {
+    .content-row .section.section-with-right-icon, .content-row .section.section-with-left-icon {
+      padding: 0; } }
+  .content-row .section img.sports-unity-li-icon.selected {
+    display: none; }
+  .content-row .section.active svg path {
+    fill: #004D99; }
+  .content-row .section.active img.sports-unity-li-icon.not-selected {
+    display: none; }
+  .content-row .section.active img.sports-unity-li-icon.selected {
+    display: block; }
+
 nav {
   position: absolute;
   top: 0;
   left: 0;
   background-color: transparent;
   box-shadow: none;
-  height: 112px;
-  z-index: 2; }
+  height: 112px; }
   @media screen and (max-width: 600px) {
     nav {
       height: 90px; } }
@@ -43,7 +138,8 @@ nav {
         padding-top: 21px; } }
     nav .nav-wrapper .brand-logo {
       height: 70px;
-      width: 180px; }
+      width: 180px;
+      z-index: 2; }
       @media screen and (max-width: 1024px) {
         nav .nav-wrapper .brand-logo {
           height: 60px;
@@ -76,155 +172,67 @@ nav {
       nav .nav-wrapper ul a:hover {
         background-color: transparent; }
 
-body > .section.section-without-bottom-padding {
-  padding-bottom: 0; }
-
-body > .section .heading-row {
-  text-align: center; }
-  body > .section .heading-row h3 {
-    font-size: 40px; }
-  body > .section .heading-row .divider {
-    width: 100px;
-    height: 4px;
-    margin: 24px auto; }
-  body > .section .heading-row p {
-    font-size: 22px;
-    font-family: "Roboto Condensed"; }
-    body > .section .heading-row p span {
-      font-weight: bold; }
-
-body > .section .content-row .section h5 {
-  font-size: 30px;
-  font-family: "Brasilia";
-  -moz-transform: matrix(0.99962, 0, 0, 1.00093, 0, 0);
-  -webkit-transform: matrix(0.99962, 0, 0, 1.00093, 0, 0);
-  -ms-transform: matrix(0.99962, 0, 0, 1.00093, 0, 0);
-  transform: matrix(0.99962, 0, 0, 1.00093, 0, 0);
-  cursor: pointer; }
-
-body > .section .content-row .section p {
-  font-size: 16px;
-  font-family: "Roboto Condensed";
-  -moz-transform: matrix(0.99999, 0, 0, 1.00093, 0, 0);
-  -webkit-transform: matrix(0.99999, 0, 0, 1.00093, 0, 0);
-  -ms-transform: matrix(0.99999, 0, 0, 1.00093, 0, 0);
-  transform: matrix(0.99999, 0, 0, 1.00093, 0, 0); }
-
-body > .section .content-row .section.active h5 {
-  color: #004D99; }
-
-@media screen and (max-width: 992px) {
-  body > .section .content-row .section {
-    text-align: center; } }
-
-body > .section.white-section {
-  background-color: #fff; }
-  body > .section.white-section .heading-row h3 {
-    color: #444444; }
-  body > .section.white-section .heading-row .divider {
-    background-color: #004D99; }
-  body > .section.white-section .heading-row p {
-    color: #777777; }
-  body > .section.white-section .content-row .section h5 {
-    color: #444444; }
-  body > .section.white-section .content-row .section p {
-    color: #757575; }
-  body > .section.white-section .content-row.active h5 {
-    color: #004D99; }
-
-.content-row .section {
+.for-the-people {
   position: relative;
-  box-sizing: border-box; }
+  font-size: 1rem;
+  background: url(../images/sports-unity-hero-banner.jpg) no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  padding-top: 150px; }
   @media screen and (min-width: 992px) {
-    .content-row .section h5 {
-      line-height: 53px; } }
-  @media screen and (min-width: 992px) {
-    .content-row .section svg {
-      position: absolute;
-      width: 41px;
-      height: 53px;
-      top: 0; } }
-  .content-row .section.section-with-right-icon {
-    padding: 0 70px 0 0;
-    text-align: right; }
-    .content-row .section.section-with-right-icon svg {
-      right: 15px; }
-  .content-row .section.section-with-left-icon {
-    padding: 0 0 0 70px; }
-    .content-row .section.section-with-left-icon svg {
-      left: 15px; }
-  @media screen and (max-width: 992px) {
-    .content-row .section.section-with-right-icon, .content-row .section.section-with-left-icon {
-      padding: 0; } }
-
-.more-from-app .section h5 {
-  color: #444;
-  margin-top: 1.84rem; }
-
-.more-from-app .section.active svg path {
-  fill: #004D99; }
-
-@media screen and (max-width: 600px) {
-  .more-from-app .section {
-    text-align: center; } }
-
-.spread-the-word {
-  background-color: #f1f1f1; }
-
-.more-from-app h3,
-.connect-with-friends h3,
-.spread-the-word h3,
-.people-around-me h3,
-.downloads h3 {
-  color: #444444;
-  line-height: 150%; }
-
-.more-from-app .divider,
-.connect-with-friends .divider,
-.spread-the-word .divider,
-.people-around-me .divider,
-.downloads .divider {
-  background-color: #004D99; }
-
-.more-from-app p,
-.connect-with-friends p,
-.spread-the-word p,
-.people-around-me p,
-.downloads p {
-  color: #777777; }
-
-.live-scores,
-.subscribe {
-  background-color: #004D99; }
-  .live-scores h3,
-  .subscribe h3 {
-    color: #fff; }
-  .live-scores .divider,
-  .subscribe .divider {
-    background-color: #fff; }
-  .live-scores p,
-  .subscribe p {
-    color: #fff; }
+    .for-the-people {
+      padding-top: 200px; } }
+  .for-the-people .phone-section {
+    text-align: center; }
+    .for-the-people .phone-section img {
+      vertical-align: bottom; }
+  .for-the-people .content-section {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 3rem; }
+    @media screen and (min-width: 992px) {
+      .for-the-people .content-section {
+        text-align: left;
+        margin-bottom: 0; } }
+    .for-the-people .content-section h1 {
+      line-height: 125%;
+      font-family: "Brasilia";
+      text-shadow: 2.5px 4.33px 5px rgba(0, 0, 0, 0.2); }
+      @media screen and (min-width: 1280px) {
+        .for-the-people .content-section h1 {
+          font-size: 4.2em; } }
+      @media screen and (min-width: 992px) {
+        .for-the-people .content-section h1 {
+          font-size: 5.4em; } }
+    .for-the-people .content-section p {
+      font-family: "Roboto", sans-serif;
+      font-size: 20px; }
+      .for-the-people .content-section p span {
+        font-family: "Brasilia", "Roboto", sans-serif; }
+    @media screen and (min-width: 992px) {
+      .for-the-people .content-section a {
+        margin-right: 6px; } }
 
 .live-scores {
   background-image: -moz-linear-gradient(90deg, #004d99 0%, #036ded 100%);
   background-image: -webkit-linear-gradient(90deg, #004d99 0%, #036ded 100%);
   background-image: -ms-linear-gradient(90deg, #004d99 0%, #036ded 100%); }
-  .live-scores .content-row .section h5 {
-    color: #fff; }
-  .live-scores .content-row .section.active h5 {
-    color: #fff !important; }
-  .live-scores .content-row .indicator-item {
-    background-color: rgba(224, 224, 224, 0.53); }
-    .live-scores .content-row .indicator-item.active {
-      background-color: #fff !important; }
+
+.people-around-me {
+  background-color: #F1F1F1 !important;
+  background-size: cover; }
+
+.spread-the-word {
+  background-color: #f1f1f1; }
+  .spread-the-word .content-row a {
+    margin: 0 3px; }
 
 .subscribe {
-  background-image: url("../images/subscribe-forupdate-bg.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  padding-top: 60px;
-  padding-bottom: 60px; }
+  background: url("../images/subscribe-forupdate-bg.png") no-repeat center bottom;
+  padding-top: 45px;
+  padding-bottom: 45px; }
   .subscribe .content-row .email-input {
     display: inline;
     position: relative;
@@ -259,116 +267,92 @@ body > .section.white-section {
   .subscribe .content-row .subscribtion-result {
     color: #fff; }
 
-.people-around-me {
-  background: url(../images/sports-icon-bg.png) repeat center center fixed;
-  background-size: cover; }
-
-.for-the-people {
-  background: url(../images/sports-unity-hero-banner.jpg) no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  padding-top: 150px;
-  padding-bottom: 0px;
-  position: relative; }
-  @media screen and (min-width: 992px) {
-    .for-the-people {
-      padding-top: 200px; } }
-  .for-the-people .half-phone-wrapper {
-    position: relative; }
-    .for-the-people .half-phone-wrapper img {
-      position: absolute;
-      bottom: 0;
-      left: 0; }
-    .for-the-people .half-phone-wrapper .half-phone-inside {
-      position: absolute;
-      left: 0;
-      bottom: 0; }
-  .for-the-people .banner-phone {
-    position: absolute;
-    max-width: 320px;
-    background-image: url("../images/sportsunity-phone.png");
-    background-repeat: no-repeat;
-    position: relative;
-    margin: 0 auto; }
-    .for-the-people .banner-phone img {
-      position: absolute;
-      width: 293px;
-      height: 515px;
-      top: 59px;
-      left: 13px;
-      overflow: hidden;
-      z-index: 2; }
-  .for-the-people .phone-section img {
-    vertical-align: bottom; }
-  .for-the-people .content-section {
-    color: #fff;
-    text-align: center;
-    padding-bottom: 30px; }
-    @media screen and (min-width: 992px) {
-      .for-the-people .content-section {
-        text-align: left;
-        padding-bottom: 0; } }
-    .for-the-people .content-section h1 {
-      font-size: 4rem;
-      line-height: 130%;
-      text-shadow: 2.5px 4.33px 5px rgba(0, 0, 0, 0.2); }
-      @media screen and (min-width: 992px) {
-        .for-the-people .content-section h1 {
-          font-size: 90px;
-          font-family: "Brasilia";
-          color: rgba(255, 255, 255, 0.8);
-          line-height: 1.444; } }
-    .for-the-people .content-section p {
-      font-size: 1.25rem;
-      font-family: "Roboto", sans-serif; }
-      @media screen and (min-width: 992px) {
-        .for-the-people .content-section p {
-          font-size: 20px;
-          font-family: "Roboto";
-          color: white;
-          line-height: 1.4;
-          text-align: left; } }
-      .for-the-people .content-section p span {
-        font-family: "Brasilia", "Roboto", sans-serif; }
-    .for-the-people .content-section a {
-      margin-right: 6px; }
-      @media screen and (max-width: 600px) {
-        .for-the-people .content-section a {
-          margin-right: 0; } }
-
-.spread-the-word .content-row a {
-  margin: 0 3px; }
-
 footer.page-footer {
   padding-top: 0;
   background-color: #004D99;
-  color: #fff; }
-  @media screen and (max-width: 992px) {
+  color: #fff;
+  font-size: 14px;
+  text-align: center; }
+  @media screen and (min-width: 992px) {
     footer.page-footer {
-      text-align: center; } }
+      text-align: left; } }
   footer.page-footer .footer-copyright {
-    height: 90px;
-    line-height: 90px;
+    height: auto;
     font-weight: bold; }
-    @media screen and (max-width: 600px) {
+    @media screen and (min-width: 992px) {
       footer.page-footer .footer-copyright {
-        line-height: 45px; } }
-    @media screen and (max-width: 600px) {
-      footer.page-footer .footer-copyright .footer-brand-link {
-        display: block; } }
-    footer.page-footer .footer-copyright .footer-brand-link .sports-unity-logo {
-      height: 45px;
-      margin-right: 1rem;
-      vertical-align: middle; }
-      @media screen and (max-width: 600px) {
-        footer.page-footer .footer-copyright .footer-brand-link .sports-unity-logo {
-          height: 36px;
-          margin-right: 0;
-          margin-top: 9px; } }
+        height: 80px;
+        line-height: 80px; } }
+    footer.page-footer .footer-copyright .footer-brand-link {
+      margin-top: 12px; }
+      @media screen and (max-width: 992px) {
+        footer.page-footer .footer-copyright .footer-brand-link {
+          display: block; } }
+      footer.page-footer .footer-copyright .footer-brand-link .sports-unity-logo {
+        height: 36px;
+        vertical-align: middle; }
+        @media screen and (min-width: 992px) {
+          footer.page-footer .footer-copyright .footer-brand-link .sports-unity-logo {
+            height: 45px;
+            margin-right: 1rem; } }
     footer.page-footer .footer-copyright a.footer-nav {
-      font-family: "Brasilia";
-      margin-left: 12px;
-      margin-right: 12px;
+      font-family: "Brasilia", "Roboto", sans-serif;
+      margin: 0 6px;
       color: #fff; }
+
+.modal {
+  max-width: 600px;
+  border-radius: 6px; }
+  .modal .modal-content {
+    padding: 0; }
+    .modal .modal-content .modal-head {
+      position: relative;
+      padding-left: 24px;
+      padding-right: 24px;
+      border-bottom: 1px solid #f0f0f0; }
+      .modal .modal-content .modal-head h4 {
+        margin: 1.14rem 0 0.912rem 0; }
+      .modal .modal-content .modal-head .modal-close {
+        position: absolute;
+        right: 12px;
+        top: 0; }
+    .modal .modal-content .modal-body {
+      text-align: center; }
+      .modal .modal-content .modal-body h3 {
+        margin: 1.46rem 0 1.168rem 0;
+        color: #004D99; }
+      .modal .modal-content .modal-body p {
+        font-size: 1.3rem;
+        color: rgba(0, 0, 0, 0.54); }
+      .modal .modal-content .modal-body .email-input {
+        display: inline;
+        position: relative;
+        margin-right: 1rem;
+        text-align: left; }
+        .modal .modal-content .modal-body .email-input label {
+          position: absolute;
+          top: -2px;
+          left: 30px; }
+          .modal .modal-content .modal-body .email-input label img {
+            width: 72%; }
+        .modal .modal-content .modal-body .email-input input {
+          max-width: 352px;
+          background: #fff;
+          border-radius: 50px;
+          height: 70px;
+          border: 0;
+          padding-left: 90px;
+          color: #004D99;
+          box-sizing: border-box; }
+          .modal .modal-content .modal-body .email-input input:focus {
+            border: 0;
+            box-shadow: none; }
+      .modal .modal-content .modal-body button {
+        width: 120px;
+        height: 70px;
+        line-height: 70px;
+        background: #fff;
+        color: #004D99;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1.8rem; }
