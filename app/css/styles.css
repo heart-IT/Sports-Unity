@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6 {
   .container {
     width: 85%; } }
 
+.phone-div {
+  background: url(../images/sportsunity-phone-full.png) no-repeat center center;
+  background-size: contain; }
+
 nav {
   position: absolute;
   top: 0;
@@ -119,20 +123,51 @@ nav {
         .for-the-people .content-section a {
           margin-right: 0; } }
 
-.slider {
-  height: 640px; }
-  .slider .slides {
-    background-color: transparent; }
-    .slider .slides li img {
-      background-size: contain;
-      background-repeat: no-repeat; }
-  .slider .indicators .indicator-item {
-    height: 8px;
-    width: 8px; }
-    .slider .indicators .indicator-item.active {
-      background-color: #004D99; }
-  .slider:not(.connect-with-friends-slider) .indicators {
-    right: 20%; }
+.content-row .section {
+  position: relative;
+  box-sizing: border-box; }
+  @media screen and (min-width: 992px) {
+    .content-row .section svg {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 0; } }
+  .content-row .section.section-with-right-icon {
+    padding: 0 70px 0 0;
+    text-align: right; }
+    .content-row .section.section-with-right-icon svg {
+      right: 15px; }
+  .content-row .section.section-with-left-icon {
+    padding: 0 0 0 70px; }
+    .content-row .section.section-with-left-icon svg {
+      left: 15px; }
+  @media screen and (max-width: 992px) {
+    .content-row .section.section-with-right-icon, .content-row .section.section-with-left-icon {
+      padding: 0; } }
+
+.more-from-app .section h5 {
+  color: #444;
+  margin-top: 1.84rem; }
+
+.more-from-app .section.active svg path {
+  fill: #004D99; }
+
+@media screen and (max-width: 600px) {
+  .more-from-app .section {
+    text-align: center; } }
+
+.slider .slides {
+  background-color: transparent; }
+  .slider .slides li img {
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+.slider .indicators .indicator-item {
+  height: 8px;
+  width: 8px;
+  margin: 0 4px; }
+  .slider .indicators .indicator-item.active {
+    background-color: #004D99; }
 
 body > .section .heading-row {
   text-align: center; }
@@ -158,25 +193,35 @@ body > .section .content-row .section p {
 body > .section .content-row .section.active h5 {
   color: #004D99; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   body > .section .content-row .section {
     text-align: center; } }
+
+.people-around-me {
+  background-color: #f1f1f1; }
+
+.spread-the-word {
+  background-color: #f1f1f1; }
 
 .more-from-app h3,
 .connect-with-friends h3,
 .spread-the-word h3,
+.people-around-me h3,
 .downloads h3 {
-  color: #444444; }
+  color: #444444;
+  line-height: 150%; }
 
 .more-from-app .divider,
 .connect-with-friends .divider,
 .spread-the-word .divider,
+.people-around-me .divider,
 .downloads .divider {
   background-color: #004D99; }
 
 .more-from-app p,
 .connect-with-friends p,
 .spread-the-word p,
+.people-around-me p,
 .downloads p {
   color: #777777; }
 
@@ -193,40 +238,10 @@ body > .section .content-row .section.active h5 {
   .subscribe p {
     color: #fff; }
 
-.phone-div {
-  background-image: url("../images/sportsunity-phone-full.png");
-  background-repeat: no-repeat;
-  height: 692px;
-  width: 361px;
-  position: relative;
-  margin: 0 auto; }
-  .phone-div .slider li {
-    position: absolute;
-    left: 23px;
-    top: 63px;
-    overflow: hidden;
-    z-index: 2;
-    width: 296px;
-    height: 526px; }
-
-.more-from-app .section h5 {
-  color: #444; }
-
-.more-from-app .section svg {
-  margin: 0.82rem 0 0.656rem 0; }
-
-.more-from-app .section.active svg path {
-  fill: #004D99; }
-
-@media screen and (max-width: 600px) {
-  .more-from-app .section {
-    text-align: center; } }
-
 .live-scores .content-row .section h5 {
   color: #fff; }
 
 .live-scores .content-row .section.active h5 {
-  text-decoration: underline;
   color: #fff !important; }
 
 .live-scores .content-row .indicator-item {

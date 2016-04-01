@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // LETS BEGIN THE CSS B-------
 @import 'materialize';
+@import 'phoney';
 
 // Nav bar CSS
 nav {
@@ -116,18 +117,71 @@ nav {
 	}
 }
 
-.slider { height: 640px;
+.content-row {
+	.section {
+		position: relative;
+		box-sizing: border-box;
+		svg {
+			@media screen and (min-width: $medium) {
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				top: 0;
+			}
+		}
+		&.section-with-right-icon {
+			padding: 0 70px 0 0;
+			text-align: right;
+			svg {
+				right: 15px;
+			}
+		}
+		&.section-with-left-icon {
+			padding: 0 0 0 70px;
+			svg {
+				left: 15px;
+			}
+		}
+		&.section-with-right-icon,
+		&.section-with-left-icon {
+			@media screen and (max-width: $medium) {
+				padding: 0;
+			}
+		}
+	}
+}
+
+// more from apps
+.more-from-app {
+	.section {
+		h5 {
+			color: #444;
+			margin-top: 1.84rem;
+		}
+		&.active {
+			svg path {
+				fill: #004D99;
+			}
+		}
+		@media screen and (max-width: $small-size) {
+			text-align: center;
+		}
+	}
+}
+
+
+.slider {
 	.slides { background-color: transparent;
 		li img { background-size: contain; background-repeat: no-repeat; }
 	}
 	.indicators {
-		.indicator-item { height: 8px; width: 8px;
+		.indicator-item { height: 8px; width: 8px; margin: 0 4px;
 			&.active { background-color: $blue; }
 		}
 	}
-	&:not(.connect-with-friends-slider)  {
-		.indicators { right: 20%; }
-	}
+	// &:not(.connect-with-friends-slider)  {
+	// 	.indicators { right: 20%; }
+	// }
 }
 
 
@@ -173,19 +227,27 @@ body > .section {
 					color: $blue;
 				}
 			}
-			@media screen and (max-width: $small-size) {
+			@media screen and (max-width: $medium) {
 				text-align: center;
 			}
 		}
 	}
 }
 
+.people-around-me {
+	background-color: #f1f1f1;
+}
+.spread-the-word {
+	background-color: #f1f1f1
+}
 .more-from-app,
 .connect-with-friends,
 .spread-the-word,
+.people-around-me,
 .downloads {
 	h3 {
 		color: #444444;
+		line-height: 150%;
 	}
 	.divider {
 		background-color: #004D99;
@@ -209,43 +271,8 @@ body > .section {
 	}
 }
 
-.phone-div {
-	background-image: url('../images/sportsunity-phone-full.png');
-	background-repeat: no-repeat;
-	height: 692px;
-	width: 361px;
-	position: relative;
-	margin: 0 auto;
-	.slider li {
-		position: absolute;
-		left: 23px;
-		top: 63px;
-		overflow: hidden;
-		z-index: 2;
-		width: 296px;
-		height: 526px;
-	}
-}
 
-// more from apps
-.more-from-app {
-	.section {
-		h5 {
-			color: #444;
-		}
-		svg {
-			margin: 0.82rem 0 0.656rem 0;
-		}
-		&.active {
-			svg path {
-				fill: #004D99;
-			}
-		}
-		@media screen and (max-width: $small-size) {
-			text-align: center;
-		}
-	}
-}
+
 
 //live scores
 .live-scores {
@@ -256,7 +283,6 @@ body > .section {
 			}
 			&.active {
 				h5 {
-					text-decoration: underline;
 					color: #fff!important;
 				}
 			}

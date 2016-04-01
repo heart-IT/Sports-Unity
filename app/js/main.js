@@ -48,7 +48,12 @@ $(document).ready(function () {
 
 	$('.modal-trigger').leanModal();
 
-	$(".more-from-app-slider").slider({ height: '600px', interval: 2000 });
+	var width= $(".more-from-app-slider").width();
+	if(width> 352) {
+		width= 352;
+	}
+	$(".more-from-app-slider").css("height", width*683/352+40+'px');
+	$(".more-from-app-slider").slider({ height: width*683/352, interval: 2000 });
 	$('.more-from-app-slider').slider('pause');
 	$(".live-score-slider").slider({ height: '600px', interval: 2000 });
 	$('.live-score-slider').slider('pause');
