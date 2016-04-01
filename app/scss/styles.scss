@@ -16,6 +16,25 @@ h1, h2, h3, h4, h5, h6 {
 @import 'materialize';
 @import 'phoney';
 
+.content-row {
+	@media screen and (min-width: $medium) {
+		display: flex;
+		align-items: center;
+		.section {
+			margin: 30px 0;
+			@media screen and (min-width: 1280px) {
+				margin: 40px 0;
+			}
+			@media screen and (min-width: 1440px) {
+				margin: 60px 0;
+			}
+			@media screen and (min-width: 1600px) {
+				margin: 70px 0;
+			}
+		}
+	}
+}
+
 // Nav bar CSS
 nav {
 	position: absolute; top: 0; left: 0;
@@ -62,25 +81,39 @@ nav {
 	@media screen and (min-width: $medium) {
 		padding-top: 200px;
 	}
+	position: relative;
+	.half-phone-wrapper {
+		position: relative;
+		img {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		.half-phone-inside {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+	.banner-phone {
+		position: absolute;
+		max-width: 320px;
+		background-image: url('../images/sportsunity-phone.png');
+		background-repeat: no-repeat;
+		position: relative;
+		margin: 0 auto;
+		img {
+			position: absolute;
+			width: 293px;
+			height: 515px;
+			top: 59px;
+			left: 13px;
+			overflow: hidden;
+			z-index: 2;
+		}
+	}
 	.phone-section {
 		height: 574px;
-		.banner-phone {
-			background-image: url('../images/sportsunity-phone.png');
-			background-repeat: no-repeat;
-			height: 574px;
-			width: 320px;
-			position: relative;
-			margin: 0 auto;
-			img {
-				position: absolute;
-				width: 293px;
-				height: 515px;
-				top: 59px;
-				left: 13px;
-				overflow: hidden;
-				z-index: 2;
-			}
-		}
 	}
 	.content-section {
 		color: #fff;
@@ -165,6 +198,16 @@ nav {
 		}
 		@media screen and (max-width: $small-size) {
 			text-align: center;
+		}
+	}
+}
+
+.live-scores {
+	.section {
+		&.active {
+			svg path {
+				// b
+			}
 		}
 	}
 }

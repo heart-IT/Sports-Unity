@@ -16,6 +16,22 @@ h1, h2, h3, h4, h5, h6 {
   background: url(../images/sportsunity-phone-full.png) no-repeat center center;
   background-size: contain; }
 
+@media screen and (min-width: 992px) {
+  .content-row {
+    display: flex;
+    align-items: center; }
+    .content-row .section {
+      margin: 30px 0; } }
+    @media screen and (min-width: 992px) and (min-width: 1280px) {
+      .content-row .section {
+        margin: 40px 0; } }
+    @media screen and (min-width: 992px) and (min-width: 1440px) {
+      .content-row .section {
+        margin: 60px 0; } }
+    @media screen and (min-width: 992px) and (min-width: 1600px) {
+      .content-row .section {
+        margin: 70px 0; } }
+
 nav {
   position: absolute;
   top: 0;
@@ -73,27 +89,38 @@ nav {
   -moz-background-size: cover;
   -o-background-size: cover;
   padding-top: 150px;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  position: relative; }
   @media screen and (min-width: 992px) {
     .for-the-people {
       padding-top: 200px; } }
+  .for-the-people .half-phone-wrapper {
+    position: relative; }
+    .for-the-people .half-phone-wrapper img {
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+    .for-the-people .half-phone-wrapper .half-phone-inside {
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+  .for-the-people .banner-phone {
+    position: absolute;
+    max-width: 320px;
+    background-image: url("../images/sportsunity-phone.png");
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto; }
+    .for-the-people .banner-phone img {
+      position: absolute;
+      width: 293px;
+      height: 515px;
+      top: 59px;
+      left: 13px;
+      overflow: hidden;
+      z-index: 2; }
   .for-the-people .phone-section {
     height: 574px; }
-    .for-the-people .phone-section .banner-phone {
-      background-image: url("../images/sportsunity-phone.png");
-      background-repeat: no-repeat;
-      height: 574px;
-      width: 320px;
-      position: relative;
-      margin: 0 auto; }
-      .for-the-people .phone-section .banner-phone img {
-        position: absolute;
-        width: 293px;
-        height: 515px;
-        top: 59px;
-        left: 13px;
-        overflow: hidden;
-        z-index: 2; }
   .for-the-people .content-section {
     color: #fff;
     text-align: center;
