@@ -22,8 +22,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 8px;
   width: 8px;
   margin: 0 4px; }
-  .slider .indicators .indicator-item.active {
-    background-color: #004D99; }
 
 body > .section {
   background-color: #fff; }
@@ -71,8 +69,13 @@ body > .section {
     transform: matrix(0.99999, 0, 0, 1.00093, 0, 0); }
   body > .section .content-row .section.active h5 {
     color: #004D99; }
-  body > .section.blue-section {
+  body > .section .content-row .slider .indicators .indicator-item.active {
     background-color: #004D99; }
+  body > .section.blue-section {
+    background-color: #004D99;
+    background-image: -moz-linear-gradient(90deg, #004d99 0%, #036ded 100%);
+    background-image: -webkit-linear-gradient(90deg, #004d99 0%, #036ded 100%);
+    background-image: -ms-linear-gradient(90deg, #004d99 0%, #036ded 100%); }
     body > .section.blue-section .heading-row h3 {
       color: #fff; }
     body > .section.blue-section .heading-row .divider {
@@ -83,6 +86,10 @@ body > .section {
       color: #fff; }
     body > .section.blue-section .content-row .section p {
       color: #fff; }
+    body > .section.blue-section .content-row .slider .indicators .indicator-item {
+      background-color: rgba(0, 0, 0, 0.54); }
+      body > .section.blue-section .content-row .slider .indicators .indicator-item.active {
+        background-color: #fff; }
 
 .content-row .section {
   position: relative;
@@ -217,11 +224,6 @@ nav {
     @media screen and (min-width: 992px) {
       .for-the-people .content-section a {
         margin-right: 6px; } }
-
-.live-scores {
-  background-image: -moz-linear-gradient(90deg, #004d99 0%, #036ded 100%);
-  background-image: -webkit-linear-gradient(90deg, #004d99 0%, #036ded 100%);
-  background-image: -ms-linear-gradient(90deg, #004d99 0%, #036ded 100%); }
 
 .people-around-me {
   background-color: #F1F1F1 !important;

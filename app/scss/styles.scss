@@ -2,7 +2,6 @@
 	font-family: 'Brasilia';
 	src: url('../fonts/Brasilia.ttf');
 }
-
 @import 'variables';
 
 body {
@@ -13,7 +12,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // LETS BEGIN THE CSS B-------
-@import 'materialize';
+.container {
+	@media screen and (min-width: $medium) { width: 85%; }
+}
+
+.slider {
+	.slides { background-color: transparent;
+		li img { background-size: contain; background-repeat: no-repeat; }
+	}
+	.indicators {
+		.indicator-item { height: 8px; width: 8px; margin: 0 4px; }
+	}
+}
+			// &.active { background-color: $blue; }
 
 // Common CSS
 body > .section {
@@ -45,9 +56,19 @@ body > .section {
 			}
 			&.active { h5 { color: $blue; } }
 		}
+		.slider {
+			.indicators {
+				.indicator-item {
+					&.active { background-color: $blue; }
+				 }
+			}
+		}
 	}
 	&.blue-section {
 		background-color: $blue;
+		background-image: -moz-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
+ 		background-image: -webkit-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
+ 		background-image: -ms-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
 		.heading-row {
 			h3 { color: #fff; }
 			.divider { background-color: #fff; }
@@ -57,6 +78,14 @@ body > .section {
 			.section {
 				h5 { color: #fff; }
 				p { color: #fff; }
+			}
+			.slider {
+				.indicators {
+					.indicator-item {
+						background-color: rgba(0, 0, 0, 0.54);
+						&.active { background-color: #fff; }
+					}
+				}
 			}
 		}
 	}
@@ -126,11 +155,7 @@ body > .section {
 @import 'banner';
 
 //live scores
-.live-scores {
-	background-image: -moz-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
- 	background-image: -webkit-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
- 	background-image: -ms-linear-gradient( 90deg, rgb(0,77,153) 0%, rgb(3,109,237) 100%);
-}
+
 
 .people-around-me {
 	background-color: #F1F1F1!important;
