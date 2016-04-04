@@ -19,7 +19,7 @@ $(document).ready(function () {
 
 		$.ajax({
 			type: 'POST',
-			url: 'http://54.255.175.45:8080/store',
+			url: 'http://54.179.173.174:8080/store',
 			data: formData,
 			dataType: 'json'
 		}).done(function() {
