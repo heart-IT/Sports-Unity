@@ -60,13 +60,12 @@ $(document).ready(function () {
 	$(".more-from-app-slider").slider({ height: width*683/352, interval: 2000 });
 	$('.more-from-app-slider').slider('pause');
 
-	width= $(".live-score-slider").width();
-	if(width> 320) {
-		width= 320;
-	}
-	$('.live-score-slider').css("height", width*574/320+'px');
-	$(".live-score-slider").slider({ height: width*574/320, interval: 2000, indicators: false });
-	$('.live-score-slider').slider('pause');
+
+	width= $('.connect-with-friends-slider').width();
+	// if(width> 35)
+	$('.connect-with-friends-slider').css("height", width*599/630+'px');
+	$('.connect-with-friends-slider').slider({ height: width*599/630, interval: 2000 });
+	$('.connect-with-friends-slider').slider('pause');
 
 	width= $(".people-around-me-slider").width();
 	if(width> 320) {
@@ -76,16 +75,21 @@ $(document).ready(function () {
 	$(".people-around-me-slider").slider({ height: width*574/320, interval: 2000, indicators: false });
 	$('.people-around-me-slider').slider('pause');
 
-	width= $('.connect-with-friends-slider').width();
-	// if(width> 35)
-	$('.connect-with-friends-slider').css("height", width*599/630+'px');
-	$('.connect-with-friends-slider').slider({ height: width*599/630, interval: 2000 });
-	$('.connect-with-friends-slider').slider('pause');
+
+
+	width= $(".live-score-slider").width();
+	if(width> 320) {
+		width= 320;
+	}
+	$('.live-score-slider').css("height", width*574/320+'px');
+	$(".live-score-slider").slider({ height: width*574/320, interval: 2000, indicators: false });
+	$('.live-score-slider').slider('pause');
 
 	var options = [
-		{ selector: '.connect-with-friends-slider', offset: 50, callback: 'startConnectSlider()' },
-		{ selector: '.live-score-slider', offset: 50, callback: 'startLiveScoreSlider()' },
 		{ selector: '.more-from-app-slider', offset: 50, callback: 'startMoreFromAppSlider()' },
+		{ selector: '.connect-with-friends-slider', offset: 50, callback: 'startConnectSlider()' },
+		{ selector: '.people-around-me-slider', offset: 50, callback: 'startPeopleAroundMeSlider()' },
+		{ selector: '.live-score-slider', offset: 50, callback: 'startLiveScoreSlider()' },
 	];
 	Materialize.scrollFire(options);
 
@@ -134,6 +138,10 @@ function startLiveScoreSlider() {
 }
 function startMoreFromAppSlider() {
 	$('.more-from-app-slider').slider('start');
+}
+
+function startPeopleAroundMeSlider() {
+	$('.people-around-me-slider').slider('start');
 }
 
 function convertIconToSvg() {

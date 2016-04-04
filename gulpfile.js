@@ -47,8 +47,8 @@ gulp.task('images', function() {
 });
 
 gulp.task('fonts', function() {
-	return gulp.src('app/fonts/**/*')
-	.pipe(gulp.dest('dist/fonts'))
+	return gulp.src('app/font/**/*')
+	.pipe(gulp.dest('dist/font'))
 });
 
 gulp.task('clean:dist', function() {
