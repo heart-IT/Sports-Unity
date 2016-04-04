@@ -18,7 +18,12 @@ h1, h2, h3, h4, h5, h6 {
 // Common CSS
 body > .section {
 	background-color: #fff;
-	&.section-without-bottom-padding { padding-bottom: 0; }
+	&.section-without-bottom-padding {
+		padding-bottom: 0;
+		.content-row {
+			margin-bottom: 0;
+		}
+	}
 	.heading-row {
 		text-align: center;
 		h3 { font-size: 40px; line-height: 125%; color: rgb(68, 68, 68); }

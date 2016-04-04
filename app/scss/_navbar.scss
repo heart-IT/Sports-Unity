@@ -4,6 +4,7 @@ nav {
 	position: absolute; top: 0; left: 0;
 	background-color: transparent; box-shadow: none;
 	height: 112px;
+	z-index: 1000;
 	@media screen and (max-width: $phone-landscape) {
 		height: 90px;
 	}
@@ -12,7 +13,7 @@ nav {
 		@media screen and (max-width: $phone-landscape) { padding-top: 21px; }
 		.brand-logo {
 			height: 70px; width: 180px;	//dimensions of brand logo svg
-			z-index: 2;
+
 			@media screen and (max-width: $tablet-landscape) { height: 60px; width: 154px; }
 			@media screen and (max-width: $phone-landscape) { height: 50px; width: 128px; }
 			img { height: 100%; width: 100%; }
@@ -28,6 +29,7 @@ nav {
 			}
 		}
 		ul a {
+			z-index: 2;
 			font-family: $heading-font;
 			font-size: 1.2rem;
 			text-transform: uppercase;

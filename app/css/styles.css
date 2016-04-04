@@ -29,6 +29,8 @@ body > .section {
   background-color: #fff; }
   body > .section.section-without-bottom-padding {
     padding-bottom: 0; }
+    body > .section.section-without-bottom-padding .content-row {
+      margin-bottom: 0; }
   body > .section .heading-row {
     text-align: center; }
     body > .section .heading-row h3 {
@@ -127,7 +129,8 @@ nav {
   left: 0;
   background-color: transparent;
   box-shadow: none;
-  height: 112px; }
+  height: 112px;
+  z-index: 1000; }
   @media screen and (max-width: 600px) {
     nav {
       height: 90px; } }
@@ -138,8 +141,7 @@ nav {
         padding-top: 21px; } }
     nav .nav-wrapper .brand-logo {
       height: 70px;
-      width: 180px;
-      z-index: 2; }
+      width: 180px; }
       @media screen and (max-width: 1024px) {
         nav .nav-wrapper .brand-logo {
           height: 60px;
@@ -166,6 +168,7 @@ nav {
           height: 50px;
           line-height: 50px; } }
     nav .nav-wrapper ul a {
+      z-index: 2;
       font-family: "Brasilia", "Roboto", sans-serif;
       font-size: 1.2rem;
       text-transform: uppercase; }
